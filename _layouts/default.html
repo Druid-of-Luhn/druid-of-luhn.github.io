@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Signika:400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="main-title"><a href="/">{{ site.name }}</a></h1>
+    {% include nav.html %}
+  </header>
+
+  {{ content }}
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

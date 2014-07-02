@@ -1,0 +1,12 @@
+---
+layout: default
+title: Billy Brown
+---
+
+<ul class="posts-list">
+  {% for post in site.posts %}
+    <li class="post-header post-header-large type-{{ post.layout }}">
+      {% include post_header.html %}
+    </li>
+  {% endfor %}
+</ul>

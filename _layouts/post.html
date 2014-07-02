@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="main-content">
+  <header class="post-header post-header-small type-post">
+    <ul class="post-categories">
+      {% for category in page.categories %}
+        <li class="post-cat-item">{{ category }}</li>
+      {% endfor %}
+    </ul>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date_to_string }}</p>
+  </header>
+
+  <div class="content post">
+  {{ content }}
+  </div>
+</section>

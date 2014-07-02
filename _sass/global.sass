@@ -1,0 +1,121 @@
+@import "syntax"
+@import "fonts"
+@import "bits"
+@import "posts"
+@import "photo"
+
+$top-offset: 4px
+html
+  background-color: #eee
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
+  font-size: 137% // 22pt
+  margin-top: $top-offset
+
+  &::before
+    background-image: linear-gradient(90deg, $dark-red, $light-red, $blue 75%)
+    content: ""
+    height: $top-offset
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+
+body
+  margin: 0
+
+h1,
+h2
+  font-family: Gothic
+  font-weight: 400
+  letter-spacing: 1px
+
+a
+  color: $dark-red
+  text-decoration: none
+
+  &:hover
+    color: $light-red
+
+figure
+  margin: 1em 0
+
+figcaption
+  margin: 0 auto
+  max-width: 45em
+
+img
+  max-width: 100%
+
+code
+  font-size: 1.25em
+
+pre
+  overflow-x: scroll
+
+.main-header
+  padding: 1em
+
+.main-title
+  float: left
+  font-size: 1.2em
+  font-weight: 400
+  margin: 0
+  text-transform: lowercase
+
+  a
+    color: $grey
+    text-decoration: none
+
+.main-nav
+  font-variant: small-caps
+  letter-spacing: 6px
+  text-align: right
+  text-transform: lowercase
+
+.nav-item
+  border-bottom: 2px solid transparent
+  color: $grey
+  display: inline-block
+  // Counteract additional space on right from inline-block
+  padding-left: 4px
+  text-decoration: none
+
+  &:not(:last-of-type)
+    margin-right: 2em
+
+  &:hover
+    color: black
+    border-bottom: 2px solid $dark-red
+
+.section-title
+  font-size: 2.2em
+
+.posts-list
+  list-style: none
+  margin: 0
+  padding: 0
+
+.content
+  margin: 0 auto
+  max-width: 45em
+
+  a
+    font-weight: 500
+
+.content.photo
+  max-width: 100%
+
+.highlight
+  padding: 0.5em 1em
+  padding-top: 2em
+  position: relative
+
+  code::before
+    background: $light-red
+    color: white
+    content: attr(class)
+    padding: 0.5em 1em
+    position: absolute
+    top: 0
+    right: 0
+    left: 0

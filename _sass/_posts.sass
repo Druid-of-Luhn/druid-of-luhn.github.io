@@ -1,0 +1,103 @@
+@mixin post-colour($colour, $darker: darken($colour, 10%))
+  @include dashed-border($darker)
+  background: $colour
+  @include shadows($darker)
+
+@mixin shadows($darker)
+  & .post-title
+    text-shadow: 5px 8px $darker
+
+    &:hover
+      text-shadow: 8px 12px $darker
+
+    &::before,
+    &::after
+      box-shadow: 1px 1px $darker, 2px 2px $darker, 3px 3px $darker, 4px 4px $darker
+
+  & .post-categories,
+  & .post-date
+    color: $darker
+
+.post-header
+  border-top: 4px solid darken($dark-red, 10%)
+  color: white
+  font-family: Signika
+  text-align: center
+
+.post-header.type-post
+  @include post-colour($dark-red)
+  &:nth-of-type(even)
+    @include post-colour(slategrey)
+
+.post-header.type-photo
+  @include shadows(black)
+  overflow: hidden
+  position: relative
+
+  .post-categories,
+  .post-date
+    text-shadow: 0 0 10px white
+
+.post-photo
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: -1
+
+.post-header-large
+  padding: 6em 0 5.5em
+
+.post-header-small
+  padding: 2em 0 0.6em
+
+.post-title
+  display: inline-block
+  font-family: inherit
+  font-size: 4em
+  font-weight: 600
+  margin: 0
+  margin-bottom: 0.25em
+  transition: text-shadow .2s
+
+  &::before,
+  &::after
+    background: white
+    content: ""
+    display: block
+    height: 2px
+    width: 100%
+
+  $border-offset: 0.3em
+  &::before
+    margin-bottom: $border-offset
+  &::after
+    margin-top: $border-offset
+
+  a
+    color: inherit
+    text-decoration: none
+
+    &:hover
+      color: inherit
+
+.post-categories
+  list-style: none
+  margin: 0
+  margin-bottom: 1em
+  padding: 0
+
+.post-cat-item
+  display: inline-block
+  margin: 0
+
+  &:not(:first-of-type)
+    margin-left: 0.5em
+
+    &::before
+      content: "•"
+      margin-right: 0.5em
+
+.post-date
+  display: block
+  text-transform: lowercase

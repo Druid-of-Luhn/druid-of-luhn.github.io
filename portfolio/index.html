@@ -1,0 +1,14 @@
+---
+layout: default
+title: Portfolio | Billy Brown
+---
+
+<ul class="posts-list">
+  {% for post in site.posts %}
+    {% if post.categories contains "portfolio" %}
+      <li class="post-header post-header-large type-site">
+        {% include post-header.html %}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
