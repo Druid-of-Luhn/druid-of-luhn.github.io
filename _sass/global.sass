@@ -108,17 +108,23 @@ pre
 
 .button
   background-color: #67f084
+  border-radius: 4px
   box-shadow: 0 5px darken(#67f084, 20%)
   color: white
   display: inline-block
   font-size: 1.5em
   font-variant: small-caps
+  letter-spacing: 6px
   padding: 0.25em 1.5em
   text-transform: lowercase
 
   &:hover
     box-shadow: 0 2px darken(#67f084, 20%)
     transform: translateY(3px)
+  
+  &:active
+    box-shadow: none
+    transform: translateY(5px)
 
 .centred
   margin: inherit auto
