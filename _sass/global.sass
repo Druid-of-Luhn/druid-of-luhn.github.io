@@ -1,40 +1,32 @@
 @import "syntax"
-@import "fonts"
-@import "bits"
-@import "posts"
-@import "photo"
 
-$top-offset: 4px
+$green: #67f084
+$blue: #67aef0
+
+
+*
+  box-sizing: border-box
+
 html
-  background-color: #eee
-  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
-  font-size: 137% // 22pt
-  margin-top: $top-offset
-
-  &::before
-    background-image: linear-gradient(90deg, $dark-red, $light-red, $blue 75%)
-    content: ""
-    height: $top-offset
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
+  font-family:  "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
+  font-size: 137.5% // 22px
 
 body
-  margin: 0
+  margin: 0 auto
+  max-width: 30em
+  padding: 0 1em
 
 h1,
 h2
-  font-family: Gothic
   font-weight: 400
   letter-spacing: 1px
 
-a
-  color: $dark-red
-  text-decoration: none
+  a
+    color: inherit
 
-  &:hover
-    color: $light-red
+a
+  color: #67aef0
+  text-decoration: none
 
 figure
   margin: 1em 0
@@ -52,58 +44,85 @@ code
 pre
   overflow-x: scroll
 
-.main-header
-  padding: 1em
-
-.main-title
-  float: left
-  font-size: 1.2em
-  font-weight: 400
-  margin: 0
-  text-transform: lowercase
-
-  a
-    color: $grey
-    text-decoration: none
-
 .main-nav
-  font-variant: small-caps
-  letter-spacing: 6px
-  text-align: right
-  text-transform: lowercase
+  margin: 1em
+  text-align: center
 
 .nav-item
-  border-bottom: 2px solid transparent
-  color: $grey
-  display: inline-block
-  // Counteract additional space on right from inline-block
-  padding-left: 4px
   text-decoration: none
 
-  &:not(:last-of-type)
-    margin-right: 2em
+  &:not(:last-of-type)::after
+    color: black
+    content: "/"
+    display: inline-block
+    margin: 0 0.5em
+    pointer-events: none
+
+.tagline
+  font-size: 2em
+  font-style: italic
+  margin: 0 0 1em
+  pointer-events: none
+  text-align: center
+
+  .big,
+  .biggest
+    display: block
+    font-style: normal
+    font-variant: small-caps
+    font-weight: 700
+    margin-top: -0.45em
+    margin-bottom: -0.33em
+
+.hire
+  margin-top: -1em
+  text-align: center
+
+.main-footer
+  display: flex
+  margin-top: 1.5em
+
+.reference
+  border-bottom: 4px solid transparent
+  display: block
+  flex: 1
+  padding-bottom: 0.5em
 
   &:hover
-    color: black
-    border-bottom: 2px solid $dark-red
+    border-bottom: 4px solid $green
 
-.section-title
-  font-size: 2.2em
-
-.posts-list
-  list-style: none
+.reference-name
+  color: black
+  font-size: 1em
   margin: 0
-  padding: 0
 
-.content
-  margin: 0 auto
-  max-width: 45em
+.reference-location
+  font-size: 0.8em
+  font-weight: 600
 
-  a
-    font-weight: 500
+.big
+  font-size: 4em
 
-.content.photo
-  max-width: 100%
+.biggest
+  font-size: 7.5em
+
+.button
+  background-color: #67f084
+  box-shadow: 0 5px darken(#67f084, 20%)
+  color: white
+  display: inline-block
+  font-size: 1.5em
+  font-variant: small-caps
+  padding: 0.25em 1.5em
+  text-transform: lowercase
+
+  &:hover
+    box-shadow: 0 2px darken(#67f084, 20%)
+    transform: translateY(3px)
+
+.centred
+  margin: inherit auto
+  text-align: center
 
 .highlight
   padding: 0.5em 1em
@@ -111,7 +130,7 @@ pre
   position: relative
 
   code::before
-    background: $light-red
+    background: $green 
     color: white
     content: attr(class)
     padding: 0.5em 1em
