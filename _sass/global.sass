@@ -1,8 +1,5 @@
 @import "syntax"
-
-$green: #67f084
-$blue: #67aef0
-
+@import "_bits"
 
 *
   box-sizing: border-box
@@ -14,12 +11,10 @@ html
 body
   margin: 0 auto
   max-width: 30em
-  padding: 0 1em
 
 h1,
 h2
   font-weight: 400
-  letter-spacing: 1px
 
   a
     color: inherit
@@ -48,8 +43,14 @@ pre
   margin: 1em
   text-align: center
 
+  @include mq("small")
+    text-align: left
+
 .nav-item
   text-decoration: none
+
+  @include mq("small")
+    display: block
 
   &:not(:last-of-type)::after
     color: black
@@ -58,12 +59,22 @@ pre
     margin: 0 0.5em
     pointer-events: none
 
+    @include mq("small")
+      display: none
+
 .tagline
   font-size: 2em
   font-style: italic
   margin: 0 0 1em
   pointer-events: none
   text-align: center
+
+  @include mq("medium")
+    font-size: 1.5em
+  
+  @include mq("small")
+    font-size: 1.2em
+    margin-bottom: 2em
 
   .big,
   .biggest
@@ -82,14 +93,29 @@ pre
   display: flex
   margin-top: 1.5em
 
+  @include mq("medium")
+    display: block
+    text-align: center
+
 .reference
-  border-bottom: 4px solid transparent
+  border-bottom: 6px solid transparent
   display: block
   flex: 1
   padding-bottom: 0.5em
 
   &:hover
-    border-bottom: 4px solid $green
+    border-bottom: 6px solid $green
+  
+  @include mq("medium")
+    border-bottom: none
+    display: block
+    margin: 1em 0
+    padding: 0
+
+    &:hover
+      border-right: 6px solid $green
+      border-bottom: none
+      border-left: 6px solid $green
 
 .reference-name
   color: black
@@ -108,17 +134,23 @@ pre
 
 .button
   background-color: #67f084
+  border-radius: 4px
   box-shadow: 0 5px darken(#67f084, 20%)
   color: white
   display: inline-block
   font-size: 1.5em
   font-variant: small-caps
+  letter-spacing: 6px
   padding: 0.25em 1.5em
   text-transform: lowercase
 
   &:hover
     box-shadow: 0 2px darken(#67f084, 20%)
     transform: translateY(3px)
+  
+  &:active
+    box-shadow: none
+    transform: translateY(5px)
 
 .centred
   margin: inherit auto
@@ -138,3 +170,4 @@ pre
     top: 0
     right: 0
     left: 0
+
