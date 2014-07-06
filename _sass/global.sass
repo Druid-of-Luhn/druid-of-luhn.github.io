@@ -5,8 +5,11 @@
   box-sizing: border-box
 
 html
-  font-family:  "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
   font-size: 137.5% // 22px
+
+  @include mq("large")
+    font-size: 175% // 28px
 
 body
   margin: 0 auto
@@ -63,6 +66,7 @@ pre
       display: none
 
 .tagline
+  font-family: "Helvetica Neue", Helvetica, sans-serif
   font-size: 2em
   font-style: italic
   margin: 0 0 1em
@@ -83,7 +87,7 @@ pre
     font-variant: small-caps
     font-weight: 700
     margin-top: -0.45em
-    margin-bottom: -0.33em
+    margin-bottom: -0.2em
 
 .hire
   margin-top: -1em
