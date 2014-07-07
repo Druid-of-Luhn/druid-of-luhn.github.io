@@ -72,9 +72,6 @@ pre
   &:last-of-type::after
     display: none
 
-.main-title
-  @extend .tagline
-
 .tagline
   font-family: Georgia, serif
   font-size: 2em
@@ -98,6 +95,12 @@ pre
     font-weight: 700
     margin-top: -0.5em
     margin-bottom: -0.2em
+
+.main-title
+  @extend .tagline
+  @include mq("small")
+    font-size: 1.6em
+    margin-bottom: 0
 
 .main-footer
   display: flex
