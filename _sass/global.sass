@@ -24,8 +24,11 @@ h2
     color: inherit
 
 a
-  color: #67aef0
+  color: $blue
   text-decoration: none
+
+  &:hover
+    color: darken($blue, 15%)
 
 figure
   margin: 1em 0
@@ -56,7 +59,7 @@ pre
   @include mq("small")
     display: block
 
-  &:not(:last-of-type)::after
+  &::after
     color: black
     content: "/"
     display: inline-block
@@ -65,6 +68,9 @@ pre
 
     @include mq("small")
       display: none
+  
+  &:last-of-type::after
+    display: none
 
 .tagline
   //font-family: "Helvetica Neue", Helvetica, sans-serif
@@ -158,6 +164,7 @@ pre
 
   &:hover
     box-shadow: 0 2px darken(#67f084, 20%)
+    color: white
     transform: translateY(3px)
   
   &:active
