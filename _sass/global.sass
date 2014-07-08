@@ -54,23 +54,11 @@ pre
     text-align: left
 
 .nav-item
+  margin: 0 1em
   text-decoration: none
 
   @include mq("small")
     display: block
-
-  &::after
-    color: black
-    content: "/"
-    display: inline-block
-    margin: 0 0.5em
-    pointer-events: none
-
-    @include mq("small")
-      display: none
-  
-  &:last-of-type::after
-    display: none
 
 .tagline
   font-family: Georgia, serif
