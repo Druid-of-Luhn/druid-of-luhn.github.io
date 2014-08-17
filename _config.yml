@@ -1,0 +1,18 @@
+name: Billy Brown
+description: "Billy Brown's personal website for web-design, programming and photography."
+author: Billy Brown
+email: w.billy.brown@gmail.com
+
+permalink: /:categories/:title/
+
+# Grunt handles images and assets.
+exclude: ["img", "css", "js", "fonts",
+          "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"]
+
+include: [".htaccess"]
+
+# Markdown library
+markdown: kramdown
+#   extensions: ["fenced_code_blocks", "smart"]
+
+pygments: true
