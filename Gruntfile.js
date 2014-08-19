@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			files: ["js/**/*.js"]
+			files: ["js/**/*.js", "!js/main.min.js"]
 		},
 
 		sass: {
