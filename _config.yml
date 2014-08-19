@@ -7,12 +7,19 @@ permalink: /:categories/:title/
 
 # Grunt handles images and assets.
 exclude: ["img", "css", "js", "fonts",
-          "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"]
+          "**.png", "**.jpg", "**.jpeg",
+          "**.gif", "**.webp", "**.svg",
+          "**.ico", "CNAME", "node_modules",
+          "Gruntfile.js", "package.json",
+          "Mockup.psd", "README.md"]
 
 include: [".htaccess"]
 
 # Markdown library
 markdown: kramdown
-#   extensions: ["fenced_code_blocks", "smart"]
 
 pygments: true
+
+sass:
+  sass_dir: _sass
+  style: :compressed
