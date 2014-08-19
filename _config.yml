@@ -6,10 +6,7 @@ email: w.billy.brown@gmail.com
 permalink: /:categories/:title/
 
 # Grunt handles images and assets.
-exclude: ["img", "css", "js", "fonts",
-          "**.png", "**.jpg", "**.jpeg",
-          "**.gif", "**.webp", "**.svg",
-          "**.ico", "CNAME", "node_modules",
+exclude: ["node_modules",
           "Gruntfile.js", "package.json",
           "Mockup.psd", "README.md"]
 
