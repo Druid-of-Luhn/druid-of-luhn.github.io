@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
 			global: {
 				files: {
-					".jekyll/css/global.css" : "css/global.css"
+					"css/global.css" : "css/global.unprefixed.css"
 				}
 			}
 		},
@@ -18,6 +18,15 @@ module.exports = function(grunt) {
 					hostname: "localhost",
 					base: ".jekyll",
 					open: true
+				}
+			}
+		},
+
+		copy: {
+			server: {
+				files: {
+					".jekyll/css/global.css" : "css/global.css",
+					".jekyll/js/main.min.js" : "js/main.min.js"
 				}
 			}
 		},
@@ -35,27 +44,13 @@ module.exports = function(grunt) {
 			files: ["js/**/*.js"]
 		},
 
-		lineremover: {
-			server: {
-				options: {
-					exclusionPattern: /(---)/g
-				},
-				files: [{
-					expand: true,
-					cwd: "_sass",
-					src: "**/*.sass",
-					dest: ".sass"
-				}]
-			}
-		},
-
 		sass: {
 			server: {
 				options: {
 					style: "compressed"
 				},
 				files: {
-					"css/global.css" : ".sass/global.sass"
+					"css/global.unprefixed.css" : "_sass/global.sass"
 				}
 			}
 		},
@@ -63,7 +58,7 @@ module.exports = function(grunt) {
 		uglify: {
 			server: {
 				src: ["js/**/*.js"],
-				dest: ".jekyll/js/main.min.js"
+				dest: "js/main.min.js"
 			}
 		},
 
@@ -74,15 +69,15 @@ module.exports = function(grunt) {
 			site: {
 				files: ["index.html", "_layouts/*.html", "_posts/*.md", "blog/index.md", "about/index.md",
 								"contact/index.html", "portfolio/index.html", "hire/index.html"],
-				tasks: ["jekyll", "uglify"]
+				tasks: ["jekyll", "copy"]
 			},
 			js: {
 				files: ["js/**/*.js"],
-				tasks: ["jshint", "uglify"]
+				tasks: ["jshint", "uglify", "copy"]
 			},
 			styles: {
 				files: ["_sass/**/*.sass"],
-				tasks: ["lineremover", "sass", "autoprefixer"]
+				tasks: ["sass", "autoprefixer", "copy"]
 			}
 		}
 
@@ -90,13 +85,15 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks("grunt-autoprefixer");
 	grunt.loadNpmTasks("grunt-contrib-connect");
+	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-sass");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-jekyll");
-	grunt.loadNpmTasks("grunt-line-remover");
 
-	grunt.registerTask("default", ["jekyll", "lineremover", "sass", "autoprefixer", "jshint", "uglify", "connect", "watch"]);
+	grunt.registerTask("js", ["jshint", "uglify"]);
+	grunt.registerTask("styles", ["sass", "autoprefixer"]);
+	grunt.registerTask("default", ["jekyll", "styles", "js", "copy", "connect", "watch"]);
 
 };
