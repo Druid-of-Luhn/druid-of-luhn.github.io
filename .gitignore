@@ -1,5 +1,3 @@
-# .gitignore for Yeoman-Jekyll projects
-
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #
 .*/
@@ -32,3 +30,9 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
+
+# Ignore specific folders and filetypes for this project
+_site
+node_modules
+*.psd
+css

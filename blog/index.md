@@ -2,4 +2,6 @@
 layout: default
 title: Blog | Billy Brown
 ---
-<h1>Blog</h1>
+# Blog
+
+Page not ready for display yet.
