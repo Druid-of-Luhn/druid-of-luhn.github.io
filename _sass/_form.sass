@@ -1,44 +1,46 @@
 input,
 textarea
-	border: 1px solid #ccc
-	font-family: inherit
-	font-size: 1em
-	font-weight: 400
-	margin: 0
+    border: 1px solid #ccc
+    font-family: inherit
+    font-size: 1em
+    font-weight: 400
+    margin: 0
 
-	&:focus
-		border-color: $green
-		box-shadow: 0 2px $green
-		outline: none
+    &:focus
+        border-color: $green
+        box-shadow: 0 2px $green
+        outline: none
 
 textarea
-	min-height: 6em
+    min-height: 6em
+    max-width: 100%
 
 input[type="submit"]
-	border: none
-	@extend .button
-	cursor: pointer
+    border: none
+    @extend .button
+    cursor: pointer
 
 label
-	display: block
+    display: block
 
-	input + &
-		font-size: 0.75em
-		text-transform: lowercase
+    input + &
+        font-size: 0.75em
+        text-transform: lowercase
 
 .form-row
-	clear: both
-	margin-top: 1em
+    clear: both
+    margin-top: 1em
+    position: relative
 
-	input,
-	textarea
-		width: 100%
+    input,
+    textarea
+        width: 100%
 
 .first-name,
 .last-name
-	float: left
-	width: 50%
+    float: left
+    width: 50%
 
 .req
-	color: red
-	font-size: 0.75em
+    color: red
+    font-size: 0.75em
