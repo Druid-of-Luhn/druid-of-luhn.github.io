@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			server: {
-				src: ["js/**/*.js"],
+				src: ["js/**/*.js", "!js/main.min.js"],
 				dest: "js/main.min.js"
 			}
 		},
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 				tasks: ["jekyll", "copy"]
 			},
 			js: {
-				files: ["js/**/*.js"],
+				files: ["js/**/*.js", "!js/main.min.js"],
 				tasks: ["jshint", "uglify", "copy"]
 			},
 			styles: {
