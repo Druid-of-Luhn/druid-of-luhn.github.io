@@ -4,7 +4,14 @@
 @import "_flipper"
 
 *
+  animation: fadein 0.5s // Fades everything in
   box-sizing: inherit
+
+@keyframes fadein
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 html
   box-sizing: border-box
@@ -182,4 +189,3 @@ pre
     top: 0
     right: 0
     left: 0
-
