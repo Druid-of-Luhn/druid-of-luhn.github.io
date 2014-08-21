@@ -2,6 +2,12 @@
 layout: default
 title: Blog | Billy Brown
 ---
-# Blog
+<h1>Blog</h1>
 
-Page not ready for display yet.
+<ul class="post-list">
+{% for post in site.posts %}
+    {% if post.category != "hidden" and post.category != "portfolio" and post.category != "photography" %}
+        {% include post-list-item.html %}
+    {% endif %}
+{% endfor %}
+</ul>

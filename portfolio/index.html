@@ -4,4 +4,10 @@ title: Portfolio | Billy Brown
 ---
 <h1>Portfolio</h1>
 
-Page not ready for display yet.
+<ul class="post-list">
+{% for post in site.posts %}
+    {% if post.category == "portfolio" or post.category == "photography" %}
+        {% include post-list-item.html %}
+    {% endif %}
+{% endfor %}
+</ul>
