@@ -1,5 +1,6 @@
 @import "syntax"
 @import "_bits"
+@import "_post-list"
 @import "_form"
 @import "_flipper"
 
@@ -17,6 +18,7 @@ html
   box-sizing: border-box
   font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif
   font-size: 137.5% // 22px
+  line-height: 1.4
 
   @include mq("large")
     font-size: 175% // 28px
@@ -26,12 +28,14 @@ body
   max-width: 30em
   padding: 0 1em
 
-h1,
-h2
-  font-weight: 400
+h1, h2, h3, h4, h5, h6
+  font-weight: 500
 
   a
     color: inherit
+
+h1
+  font-weight: 400
 
 a
   color: $blue
@@ -47,8 +51,17 @@ figcaption
   margin: 0 auto
   max-width: 45em
 
+hr
+  border: 1px solid $grey
+  margin: 2em auto
+  width: 50%
+
 img
   max-width: 100%
+
+p
+  line-height: 1.8
+  margin: 0 0 1em
 
 code
   font-size: 1.25em
