@@ -15,7 +15,7 @@ include: [".htaccess"]
 # Markdown library
 markdown: kramdown
 
-pygments: true
+highlighter: pygments
 
 sass:
   sass_dir: _sass
