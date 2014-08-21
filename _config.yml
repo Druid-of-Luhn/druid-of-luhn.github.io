@@ -4,7 +4,6 @@ author: Billy Brown
 email: w.billy.brown@gmail.com
 
 permalink: /:categories/:title/
-paginate: 8
 
 # Grunt handles images and assets.
 exclude: ["node_modules",
