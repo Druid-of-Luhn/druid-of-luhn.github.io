@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Explaining the programming your boyfriend does, often when sitting on your bed – or a guide to the different types of coding I do
 category: hidden
 tags:
