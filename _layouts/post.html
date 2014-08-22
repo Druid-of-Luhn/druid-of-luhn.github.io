@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign post = page %}
+<section class="post">
+    <header class="post__header">
+        <h2 class="post__title">{{ post.title }}</h2>
+        <span class="post__meta">
+            Published on <time class="post__date" datetime="{{ post.date }}">{{ post.date | date: "%-d %b %y" }}</time> in 
+            <span class="post__category">{{ post.category }}</span>
+            {% include tags.html %}
+        </span>
+    </header>
+    <div class="post__content">
+        {{ content }}
+    </div>
+</section>
