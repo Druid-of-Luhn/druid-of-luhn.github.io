@@ -23,10 +23,15 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			server: {
+			style: {
 				files: {
-					".jekyll/css/global.css" : "css/global.css",
-					".jekyll/js/main.min.js" : "js/main.min.js"
+					".jekyll/css/global.css" : "css/global.css"
+                }
+            },
+            js: {
+                files: {
+					".jekyll/js/main.min.js" : "js/main.min.js",
+                    ".jekyll/js/wufoo.min.js" : "js/wufoo.min.js"
 				}
 			}
 		},
@@ -57,9 +62,13 @@ module.exports = function(grunt) {
 
 		uglify: {
 			server: {
-				src: ["js/**/*.js", "!js/main.min.js"],
+				src: ["js/**/*.js", "!js/*.min.js", "!js/wufoo.js"],
 				dest: "js/main.min.js"
-			}
+			},
+            wufoo: {
+                src: ["js/wufoo.js"],
+                dest: "js/wufoo.min.js"
+            }
 		},
 
 		watch: {
@@ -72,12 +81,12 @@ module.exports = function(grunt) {
 				tasks: ["jekyll", "copy"]
 			},
 			js: {
-				files: ["js/**/*.js", "!js/main.min.js"],
-				tasks: ["jshint", "uglify", "copy"]
+				files: ["js/**/*.js", "!js/*.min.js"],
+				tasks: ["jshint", "uglify", "copy:js"]
 			},
 			styles: {
 				files: ["_sass/**/*.sass"],
-				tasks: ["sass", "autoprefixer", "copy"]
+				tasks: ["sass", "autoprefixer", "copy:style"]
 			}
 		}
 
