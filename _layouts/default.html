@@ -17,14 +17,16 @@
 	</script>
 </head>
 <body>
+    {% if page.type != "home" %}
+        <h1 class="main-title"><a href="/">Billy Brown</a></h1>
+    {% endif %}
+        
 	<nav class="main-nav">
 		<a href="/blog" class="nav-item">Blog</a>
 		<a href="/about" class="nav-item">About</a>
 		<a href="/contact" class="nav-item">Contact</a>
 		<a href="/portfolio" class="nav-item">Portfolio</a>
 	</nav>
-
-	<h1 class="main-title"><a href="/">Billy Brown</a></h1>
 
 	{{ content }}
 
