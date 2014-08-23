@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign post = page %}
+<div class="photo">
+    <img src="{{ post.source }}" alt="{{ post.alt }}" title="{{ post.title }}" class="photo__image">
+    <div class="photo__meta">
+        <span class="photo__shutter">{{ post.shutter }}</span>
+        <span class="photo__aperture">{{ post.aperture }}</span>
+        <span class="photo__iso">{{ post.iso }}</span>
+        <span class="photo__focal">{{ post.focal }}</span>
+    </div>
+    {% include post.html %}
+</div>
