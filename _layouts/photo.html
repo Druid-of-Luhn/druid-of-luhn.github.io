@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign post = page %}
+<div class="photo">
+    <img src="/img/full/{{ post.source }}" alt="{{ post.alt }}" title="{{ post.title }}" class="photo__image">
+    <div class="photo__meta">
+        <span class="single-line">Shutter Speed <span class="photo__shutter  meta__item">{{ post.shutter }}</span></span>
+        <span class="single-line">Aperture <span class="photo__aperture  meta__item">{{ post.aperture }}</span></span>
+        <span class="single-line">ISO <span class="photo__iso  meta__item">{{ post.iso }}</span></span>
+        <span class="single-line">Focal Length <span class="photo__focal  meta__item">{{ post.focal }}</span>mm</span>
+    </div>
+    {% include post.html %}
+</div>

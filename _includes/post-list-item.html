@@ -12,8 +12,12 @@
         </span>
     </header>
     <div class="post__content">
+        {% if post.category == "photography" %}
+        <img src="/img/full/{{ post.source }}" alt="{{ post.alt }}" title="{{ post.title }}" class="photo__image--small">
+        {% else %}
         {{ post.excerpt | remove: "</p>" }}
         <a href="{{ post.url }}">Read on »</a></p>
+        {% endif %}
     </div>
     <footer class="post__footer">
         {% include tags.html %}
