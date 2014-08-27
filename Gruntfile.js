@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 				livereload: true
 			},
 			site: {
-				files: ["index.html", "_layouts/*.html", "_includes/*.html", "_posts/*.md", "blog/index.html", "about/index.md",
+				files: ["index.html", "_layouts/*.html", "_includes/*.html", "_posts/*.md", "blog/index.html", "about/index.html",
 								"contact/index.html", "portfolio/index.html", "hire/index.html"],
 				tasks: ["jekyll", "copy"]
 			},
