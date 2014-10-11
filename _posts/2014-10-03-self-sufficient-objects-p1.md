@@ -11,7 +11,9 @@ tags:
 
 The idea of this article is to introduce the concept of designing with objects, represented in the markup, the styling and the interaction with the user. It is a good case for representing a list of items that have the same properties and actions.
 
-An small example could be items in a shop, which are read in from a JSON file and hold information about themselves. Interaction consists of adding or removing items, which results in their cost and amount changing. This example will appear throughout the article. You can see this in use [in a small project](http://wb33.host.cs.st-andrews.ac.uk/CS2003/P01/shopfront.html) we were set in our Computer Science web module.
+An small example could be items in a shop, which are read in from a JSON file and hold information about themselves. Interaction consists of adding or removing items, which results in their cost and amount changing. This example will appear throughout the article. This pen shows it in use, on both the CSS and JavaScript, the latter generating the items' markup:
+<p data-height="349" data-theme-id="9188" data-slug-hash="tvGof" data-default-tab="result" data-user="_Billy_Brown" class='codepen'>See the Pen <a href='http://codepen.io/_Billy_Brown/pen/tvGof/'>tvGof</a> by Billy Brown (<a href='http://codepen.io/_Billy_Brown'>@_Billy_Brown</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
 I will mention now that what is done here can be encapsulated into one single tag, using the [Web Components](http://www.w3.org/TR/components-intro/) standard. I will not go over this method here; simply how to build an object in basic HTML, CSS and JavaScript.
 
