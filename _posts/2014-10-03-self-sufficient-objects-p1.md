@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Self-sufficient objects in a web-page : markup and styling"
-category: blog
+category: hidden
 tags:
  - web-design
  - OOP
