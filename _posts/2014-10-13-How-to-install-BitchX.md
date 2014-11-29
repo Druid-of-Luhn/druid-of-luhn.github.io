@@ -5,7 +5,10 @@ category: blog
 tags:
  - howto
  - unix
+ - tutorial
 ---
+Although it has an unfortunate name, BitchX is a very good IRC client. Very simple to use but also extremely powerful for power users, you can install this faviourite of an IRC client just about anywhere, so you can continue your workflow.
+
 ## Step 1: Get BitchX
 
 You first need to install BitchX to your computer. To do this, copy/paste this into the Terminal:
