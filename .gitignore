@@ -13,6 +13,7 @@ Thumbs.db
 *.err
 *.log
 *.lock
+*.map
 *.orig
 *.rej
 *.swn
