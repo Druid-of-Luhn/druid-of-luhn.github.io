@@ -1,6 +1,6 @@
 ---
 layout: post
-title: International Chorale of Brussels Website
+title: Intern&shy;ational Chorale of Brussels Website
 category: portfolio
 tags:
  - website
