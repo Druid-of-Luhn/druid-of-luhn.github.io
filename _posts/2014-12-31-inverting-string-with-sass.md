@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inverting a String with Sass
+title: Inver&shy;ting a String with Sass
 category: blog
 tags:
  - sass
