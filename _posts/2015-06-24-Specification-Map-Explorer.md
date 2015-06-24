@@ -19,7 +19,7 @@ The game engine should be as simple as possible, with no complicated connections
 
 ## Displaying the Game
 
-The code to display the game must implement a simple interface, which requires the presence of a `display` function that should allow the caller to request a specified grid tile to be drawn at a specific position in the game window. The `display` function should be able to convert the tile data to the tile that it will display in the game window.
+The code to display the game must implement a simple interface, which requires the presence of a `display` function that should allow the caller to request a specified grid tile to be drawn at a specific position in the game window, and a `display_all` function that should draw the entire game window, displaying the map centred on the camera's position. The `display` function should be able to convert the tile data to the tile that it will display in the game window and the `display_all` function should be able to work out which map tiles to draw on screen using the camera's position.
 
 ## Further Work
 
