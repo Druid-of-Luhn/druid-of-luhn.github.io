@@ -7,7 +7,7 @@
             </a>
         </h2>
         <span class="post__meta">
-            published on <time class="post__date" datetime="{{ post.date }}">{{ post.date | date: "%-d %b %y" }}</time> in 
+            {% include post-date.html %}
             <span class="post__category">{{ post.category }}</span>
         </span>
     </header>
