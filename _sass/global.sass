@@ -131,7 +131,7 @@ strong
   padding-bottom: 0.5em
 
   &:hover
-    border-bottom: 6px solid $green
+    border-bottom: 6px solid $main
   
   @include mq("medium")
     border-bottom: none
@@ -140,9 +140,9 @@ strong
     padding: 0
 
     &:hover
-      border-right: 6px solid $green
+      border-right: 6px solid $main
       border-bottom: none
-      border-left: 6px solid $green
+      border-left: 6px solid $main
 
 .reference-name
   color: black
@@ -169,9 +169,9 @@ strong
   font-size: 7em
 
 .button
-  background-color: #67f084
+  background-color: $main
   border-radius: 4px
-  box-shadow: 0 5px darken(#67f084, 20%)
+  box-shadow: 0 5px darken($main, 20%)
   color: white
   display: inline-block
   font-size: 1.5em
@@ -182,7 +182,7 @@ strong
   text-transform: lowercase
 
   &:hover
-    box-shadow: 0 2px darken(#67f084, 20%)
+    box-shadow: 0 2px darken($main, 20%)
     color: white
     transform: translateY(3px)
   
@@ -200,7 +200,7 @@ strong
   margin: 1em
 
   &::before
-    color: $green
+    color: $main
     content: "(i)"
     display: inline-block
     font-family: monospace
@@ -216,7 +216,7 @@ strong
   position: relative
 
   code::before
-    background: $green 
+    background: $main 
     color: white
     content: ""
     padding: 0.5em
