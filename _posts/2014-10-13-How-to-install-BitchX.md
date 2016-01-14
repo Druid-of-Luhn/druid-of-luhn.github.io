@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to install the BitchX IRC client
+title: Install the BitchX IRC client
 category: blog
 tags:
  - howto
