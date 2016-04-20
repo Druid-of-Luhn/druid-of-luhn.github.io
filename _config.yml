@@ -1,22 +1,13 @@
 name: Billy Brown
 description: "Billy Brown's personal website for web-design, programming and photography."
 author: Billy Brown
-email: w.billy.brown@gmail.com
+email: druidofluhn@gmail.com
 
 permalink: /:categories/:title/
 
-# Grunt handles images and assets.
-exclude: ["node_modules",
-          "Gruntfile.js", "package.json",
-          "Mockup.psd", "README.md"]
-
-include: [".htaccess"]
+exclude: [ "Mockup.psd", "README.md" ]
 
 # Markdown library
 markdown: kramdown
 
 highlighter: rouge
-
-sass:
-  sass_dir: _sass
-  style: :compressed

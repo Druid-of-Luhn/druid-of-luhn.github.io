@@ -34,5 +34,6 @@ Thumbs.db
 
 # Ignore specific folders and filetypes for this project
 node_modules
+_site
 *.psd
 css/global.unprefixed.css
