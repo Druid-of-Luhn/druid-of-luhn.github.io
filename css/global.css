@@ -1,0 +1,45 @@
+/*
+ * COLOURS
+ * base     dd2e44
+ * dark     bb0c22
+ * bright   ffffff
+ */
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+input,
+textarea {
+    box-sizing: border-box;
+    font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background-color: #dd2e44;
+}
+
+.main__title {
+    font-size: 21vw;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    margin-left: -0.125em;
+    margin-top: -0.6em;
+    text-align: center;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+.main__title > a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 4px 0 #bb0c22;
+    transition: all 0.2s ease;
+}
+
+.main__title > a:hover {
+    text-shadow: 0 8px 0 #bb0c22;
+}
