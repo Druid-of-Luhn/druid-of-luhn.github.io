@@ -3,7 +3,9 @@
  * base     dd2e44
  * dark     bb0c22
  * bright   ffffff
+ * colour   8ae7ed
  */
+
 * {
     box-sizing: inherit;
     margin: 0;
@@ -22,12 +24,34 @@ body {
     background-color: #dd2e44;
 }
 
+h2 {
+    color: #dd2e44;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+strong {
+    color: #dd2e44;
+    font-weight: 600;
+}
+
 .main__title {
     font-size: 21vw;
     font-variant: small-caps;
     letter-spacing: 2px;
     margin-left: -0.125em;
     margin-top: -0.6em;
+    overflow-x: hidden;
     text-align: center;
     text-transform: lowercase;
     white-space: nowrap;
@@ -42,4 +66,12 @@ body {
 
 .main__title > a:hover {
     text-shadow: 0 8px 0 #bb0c22;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 16px 0 -8px #bb0c22;
+    margin: 1em auto;
+    max-width: 50em;
+    padding: 2em;
 }
