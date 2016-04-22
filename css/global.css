@@ -105,10 +105,14 @@ strong {
     border-bottom: 4px solid white;
 }
 
-main {
-    background: #ffffff;
+main,
+.main__footer {
     margin: 2em auto 0;
     max-width: 50em;
+}
+
+main {
+    background: #ffffff;
     padding: 2em;
 }
 
@@ -117,4 +121,50 @@ main {
     border-radius: 50%;
     display: block;
     margin: 1em auto;
+}
+
+.main__footer {
+    display: flex;
+}
+
+.reference {
+    background-color: white;
+    flex: 1;
+    margin: 0 1em;
+    padding: 1em;
+}
+
+.reference:first-of-type {
+    margin-left: 0;
+}
+
+.reference:last-of-type {
+    margin-right: 0;
+}
+
+@media (max-width: 30em) {
+    .main__footer {
+        display: block;
+    }
+
+    .reference,
+    .reference:first-of-type,
+    .reference:last-of-type {
+        margin: 0 2em;
+        text-align: center;
+    }
+}
+
+.reference > a {
+    display: block;
+}
+
+.copyright {
+    font-size: 0.8em;
+    margin: 1em;
+    text-align: center;
+}
+
+.copyright > a {
+    color: black;
 }

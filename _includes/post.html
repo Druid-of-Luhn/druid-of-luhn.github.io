@@ -1,14 +1,11 @@
 {% assign post = page %}
-<section class="post">
-    <header class="post__header">
-        <h1 class="post__title">{{ post.title }}</h1>
-        <span class="post__meta">
-            {% include post-date.html %}
-            <span class="post__category  meta__item">{{ post.category }}</span>
-            {% include tags.html %}
-        </span>
-    </header>
-    <div class="post__content">
-        {{ content }}
-    </div>
-</section>
+<header class="post__header">
+    <span class="post__meta">
+        {% include post-date.html %}
+        <span class="post__category  meta__item">{{ post.category }}</span>
+        {% include tags.html %}
+    </span>
+</header>
+<div class="post__content">
+    {{ content }}
+</div>

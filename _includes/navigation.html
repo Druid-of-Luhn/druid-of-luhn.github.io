@@ -1,0 +1,12 @@
+<nav class="main__nav">
+    <ul>
+        {% for site_page in site.pages %}
+        <li><a href="{{ site_page.url }}" title="{{ site_page.title }}" 
+            {% if site_page.title == page.title %}
+            class="active"
+            {% endif %}>
+            {{ site_page.title }}
+        </a></li>
+        {% endfor %}
+    </ul>
+</nav>
