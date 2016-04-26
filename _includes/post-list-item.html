@@ -1,26 +1,25 @@
 <li>
 <article class="post-list__item">
     <header class="post__header">
-        <h2 class="post__title--small">
+        <h3 class="post__title--small">
             <a href="{{ post.url }}">
                 {{ post.title }}
             </a>
-        </h2>
+        </h3>
         <span class="post__meta">
-            {% include post-date.html %}
-            <span class="post__category">{{ post.category }}</span>
+            Published on
+            {% include date.html %}
+            in
+            <span class="post__category  meta__item">{{ post.category }}</span>
+            {% include tags.html %}
         </span>
     </header>
     <div class="post__content">
         {% if post.category == "photography" %}
         <img src="/img/full/{{ post.source }}" alt="{{ post.alt }}" title="{{ post.title }}" class="photo__image--small">
         {% else %}
-        {{ post.excerpt | remove: "</p>" }}
-        <a href="{{ post.url }}">Read&nbsp;on&nbsp;»</a></p>
+        {{ post.excerpt }}
         {% endif %}
     </div>
-    <footer class="post__footer">
-        {% include tags.html %}
-    </footer>
 </article>
 </li>

@@ -8,7 +8,7 @@ tags:
  - gamedev
 ---
 
-I have recently started working on a [small side-scroller game](https://github.com/Druid-of-Luhn/SideScroller) in C++, using [SDL](https://libsdl.org) for drawing on a canvas. It was actually originally ported over and cleaned up from a [small JavaScript side-scroller experiment](http://codepen.io/_Billy_Brown/pen/EjxBYX/) over on [CodePen](https://codepen.io).
+I have recently started working on a small side-scroller game in C++, using [SDL](https://libsdl.org) for drawing on a canvas. It was actually originally ported over and cleaned up from a [small JavaScript side-scroller experiment](http://codepen.io/_Billy_Brown/pen/EjxBYX/) over on [CodePen](https://codepen.io).
 
 ## Why Make a Side-Scroller?
 

@@ -21,7 +21,7 @@ So to get around this, I thought of inverting the name of the class and of the f
 
 This could be done with a Sass function, as show below.
 
-{% highlight sass %}
+{% highlight scss %}
 @function invert($string) {
     $size: str-length($string);
     $newstring: "";

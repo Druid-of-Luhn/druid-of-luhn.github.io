@@ -25,25 +25,59 @@ body {
     background-color: #dd2e44;
 }
 
-h2 {
+code {
+    font-size: 1.2em;
+}
+
+h1,
+h2,
+h3,
+h1 a,
+h2 a,
+h3 a {
     color: #dd2e44;
-    font-size: 3em;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
     margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 3em;
     text-align: center;
 }
 
-p {
+img {
+    max-width: 100%;
+}
+
+.post__content figure,
+.post__content p,
+.post__content ul {
     font-size: 1.25em;
     margin-bottom: 1em;
 }
 
-p:last-of-type {
+.post__content figure:last-child,
+.post__content p:last-child,
+.post__content ul:last-child {
     margin-bottom: 0;
+}
+
+pre {
+    overflow-x: scroll;
 }
 
 strong {
     color: #dd2e44;
     font-weight: 600;
+}
+
+.post__content ul {
+    padding-left: 1.25em;
 }
 
 .main__title {
@@ -167,4 +201,44 @@ main {
 
 .copyright > a {
     color: black;
+}
+
+.post-list {
+    list-style: none;
+}
+
+.post-list__item {
+    clear: both;
+    margin: 2em 0;
+}
+
+.post__title--small {
+    font-size: 2em;
+}
+
+.post__meta {
+    display: block;
+    margin: 1em 0;
+}
+
+.meta__item,
+.tag__item {
+    font-weight: 600;
+}
+
+.post__tags {
+    list-style: none;
+}
+
+.tag__item {
+    display: inline;
+}
+
+.tag__item:not(:last-of-type):after {
+    content: " · ";
+}
+
+.post__content h2 {
+    font-size: 2em;
+    text-align: left;
 }

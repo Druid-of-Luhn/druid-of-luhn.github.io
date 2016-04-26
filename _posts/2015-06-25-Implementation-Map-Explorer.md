@@ -8,7 +8,7 @@ tags:
  - project
 ---
 
-This is a post that will follow the process I took to build a small, modular and clean top-down map explorer game based off [my own specification](http://billy-brown.net/blog/Specification-Map-Explorer). The code described in this post is available in [this gist](https://gist.github.com/Druid-of-Luhn/d277358f5f279ea1742b).
+This is a post that will follow the process I took to build a small, modular and clean top-down map explorer game based off [my own specification](/blog/Specification-Map-Explorer). The code described in this post is available in [this gist](https://gist.github.com/Druid-of-Luhn/d277358f5f279ea1742b).
 
 ## Choosing a Language
 
