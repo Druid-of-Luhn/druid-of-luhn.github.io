@@ -4,6 +4,7 @@
  * dark     bb0c22
  * bright   ffffff
  * colour   8ae7ed
+ * grey     eeeeee
  */
 
 * {
@@ -208,7 +209,6 @@ main {
 }
 
 .post-list__item {
-    clear: both;
     margin: 2em 0;
 }
 
