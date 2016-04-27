@@ -28,6 +28,16 @@ body {
 
 code {
     font-size: 1.2em;
+    word-break: break-all;
+}
+
+figure {
+    border-top: 1em solid #dd2e44;
+}
+
+figure > pre {
+    background-color: #eeeeee;
+    padding: 1em;
 }
 
 h1,
@@ -49,6 +59,11 @@ h3 {
 h2 {
     font-size: 3em;
     text-align: center;
+}
+
+.post__content h2 {
+    font-size: 2em;
+    text-align: left;
 }
 
 img {
@@ -236,9 +251,4 @@ main {
 
 .tag__item:not(:last-of-type):after {
     content: " · ";
-}
-
-.post__content h2 {
-    font-size: 2em;
-    text-align: left;
 }
