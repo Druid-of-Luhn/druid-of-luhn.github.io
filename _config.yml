@@ -2,6 +2,7 @@ name: Billy Brown
 description: "Billy Brown's personal website for web-design, programming and photography."
 author: Billy Brown
 email: druidofluhn@gmail.com
+url: //billy-brown.net
 
 permalink: /:categories/:title/
 

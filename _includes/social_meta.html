@@ -1,0 +1,10 @@
+<!-- Social Media stuff -->
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if page.category == "photography" %}
+<meta property="og:image" content="{{ site.url }}/img/full/{{ page.source }}">
+<meta property="twitter:image:alt" content="{{ page.alt }}">
+{% endif %}
+<!-- End Social Media stuff -->
