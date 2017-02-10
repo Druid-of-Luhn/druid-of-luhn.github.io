@@ -13,7 +13,7 @@ After the recent update to the Mafia II on the Mac Appstore, I was confronted wi
 
 Upon visiting the [Feral Interactive website](https://www.feralinteractive.com) to see what the system requirements are, I saw that my graphics card – an Intel HD 3000 – was on the list, even though it has the required 512MB of virtual memory and could run the game without crashing before the update.
 
-As Feral Interactive are probably good programmers, I guessed that they would be storing this sort of information in a plain text file in game directory. After a quick search with [ag](https://github.com/ggreer/the_silver_searcher) for `'intel'`, I found the file I wanted:  
+As Feral Interactive are probably good programmers, I guessed that they would be storing this sort of information in a plain text file in the game directory. After a quick search with [ag](https://github.com/ggreer/the_silver_searcher) for `'intel'`, I found the file I wanted:  
 __/Applications/Mafia II.app/Contents/Resources/specifications.xml__
 
 ```
