@@ -8,13 +8,13 @@ tags:
  - gamedev
 ---
 
-I have recently started working on a small side-scroller game in C++, using [SDL](https://libsdl.org) for drawing on a canvas. It was actually originally ported over and cleaned up from a [small JavaScript side-scroller experiment](http://codepen.io/_Billy_Brown/pen/EjxBYX/) over on [CodePen](https://codepen.io).
+I have recently started working on a small side-scroller game in C++, using [SDL](https://libsdl.org) for drawing on a canvas. It was actually originally ported over and cleaned up from a [small JavaScript side-scroller experiment](https://codepen.io/_Billy_Brown/pen/EjxBYX/) over on [CodePen](https://codepen.io).
 
 ## Why Make a Side-Scroller?
 
-This is not the first graphics game I have attempted to program and I don't think that it will be the last. I first started a [top-down shooter experiment](http://codepen.io/_Billy_Brown/pen/jEPzeX) in JavaScript, using canvas, to see if I could actually do it. Having started work on that, I could have continued, porting the code over to C++ as I have done with the current project, improving collisions, adding other characters controlled by AI or maybe played over sockets, added graphics, sound, everything a game needs. But instead I went for a side-scroller. Why the change?
+This is not the first graphics game I have attempted to program and I don't think that it will be the last. I first started a [top-down shooter experiment](https://codepen.io/_Billy_Brown/pen/jEPzeX) in JavaScript, using canvas, to see if I could actually do it. Having started work on that, I could have continued, porting the code over to C++ as I have done with the current project, improving collisions, adding other characters controlled by AI or maybe played over sockets, added graphics, sound, everything a game needs. But instead I went for a side-scroller. Why the change?
 
-The reason is actually that for some time now I've been helping a [friend](http://larasdrawsthings.blogspot.co.uk) design a game, with the help of a [second friend](https://twitter.com/binnie567), and after some discussion, it was decided that the game would be made as a side-scroller. Although the game was to be developed in [Unity](http://unity3d.com), which provides a full engine, I thought I would use the idea as inspiration to push myself to make a small game in C++, which I have been teaching myself after learning C for my Computer Science course.
+The reason is actually that for some time now I've been helping a [friend](https://larasdrawsthings.blogspot.co.uk) design a game, with the help of a [second friend](https://twitter.com/binnie567), and after some discussion, it was decided that the game would be made as a side-scroller. Although the game was to be developed in [Unity](https://unity3d.com), which provides a full engine, I thought I would use the idea as inspiration to push myself to make a small game in C++, which I have been teaching myself after learning C for my Computer Science course.
 
 ## Programming Style
 

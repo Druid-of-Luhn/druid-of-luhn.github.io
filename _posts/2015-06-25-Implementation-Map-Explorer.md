@@ -18,7 +18,7 @@ As the specification did not require a specific language to be used for this pro
 
 ## The Game Loop
 
-The most important part of a game is its game loop. This is the code that controls all other code and holds it all together. There are many good posts about good game loops in games – [such as this one](http://www.koonsolo.com/news/dewitters-gameloop) – but I did not need to follow any for this game, as it waits for user input, with no need of a constant refresh rate.
+The most important part of a game is its game loop. This is the code that controls all other code and holds it all together. There are many good posts about good game loops in games – [such as this one](https://www.koonsolo.com/news/dewitters-gameloop) – but I did not need to follow any for this game, as it waits for user input, with no need of a constant refresh rate.
 
 The loop code I used in this game is quite simple; whilst the game is running (the actual loop part of the game), it will display the current game state, then handle any input, which takes care of updating the game.
 

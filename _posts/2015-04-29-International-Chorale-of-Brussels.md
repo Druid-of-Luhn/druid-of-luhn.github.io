@@ -22,7 +22,7 @@ The back end of the website was moved from pages generated in Microsoft Word to 
 
 The front end of the website was the part of this project that I spent the most time on, which still doesn't amount to much. The theme was created from a blank one, that I think was recommended by [Chris Coyier](https://twitter.com/chriscoyier) over on [CSS-Tricks](https://css-tricks.com), making any markup work as simple as writing HTML code in the correct files around the PHP code. No special plugins or functions were needed and in fact there is not even a sidebar or footer, which really made the website light on markup.
 
-The stylesheet was then written in [Scss](http://sass-lang.com), which allowed me to make it modular, by splitting different parts of the stylesheet over different files, keeping the codebase nice and clean. There was not much styling to do, which allowed the code to once more, as with the rest of the code on this project, remain quite light.
+The stylesheet was then written in [Scss](https://sass-lang.com), which allowed me to make it modular, by splitting different parts of the stylesheet over different files, keeping the codebase nice and clean. There was not much styling to do, which allowed the code to once more, as with the rest of the code on this project, remain quite light.
 
 And it remained light even with the addition of media-queries for making the website responsive. Along with migrating to Wordpress and writing the stylesheet in Scss, making the website responsive was one of the main factors that brought on this rebuilding of the International Chorale's website.
 

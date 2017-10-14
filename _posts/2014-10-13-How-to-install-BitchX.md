@@ -25,7 +25,7 @@ You will need to install the Command Line Tools first.
 
 ## Step 2: Configure BitchX
 
-You can find a [BitchX man page](http://linux.die.net/man/1/bitchx).
+You can find a [BitchX man page](https://linux.die.net/man/1/bitchx).
 
 To start configuring BitchX, you will need to edit your `.bash_profile` file, which is in your home folder:
 
@@ -102,4 +102,4 @@ To quit BitchX, simply type
 
 There are many more things that you can do with BitchX, such as using multiple channels, using multiple windows and certain commands concerning other people.
 
-I will not explain these here as there is a lot of interesting information for them in [this MIT BitchX FAQ](http://stuff.mit.edu/afs/sipb/user/ssen/src/BitchX/doc/entire-faq.html).
+I will not explain these here as there is a lot of interesting information for them in [this MIT BitchX FAQ](https://stuff.mit.edu/afs/sipb/user/ssen/src/BitchX/doc/entire-faq.html).
