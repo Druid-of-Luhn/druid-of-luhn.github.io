@@ -1,0 +1,128 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444455;
+    color: #f0f0f0;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    margin: 1em auto;
+    max-width: 45em;
+    padding: 0;
+}
+
+a {
+    color: #ffaaaa;
+}
+
+code {
+    font-size: 1.25em;
+}
+
+h1,
+h2,
+.header,
+.project-description,
+.links {
+    font-family: "Arvo", "Open Sans", sans-serif;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 36em;
+    text-align: center;
+}
+
+.title {
+    font-size: 4em;
+}
+
+.introduction {
+    font-size: 1.25em;
+}
+
+.interests,
+.links {
+    padding: 0;
+}
+
+.interests li {
+    display: inline-block;
+}
+
+.interests li:not(:last-child):after {
+    content: ' •';
+}
+
+.projects-row {
+    display: flex;
+}
+
+.project {
+    flex: 1;
+    margin: 1em;
+}
+.project-title,
+.project-title-small {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 4px;
+}
+
+.project-title {
+    font-size: 1.75em;
+}
+
+.project-title-small {
+    font-size: 1em;
+}
+
+.small-text {
+    font-size: 0.75em;
+}
+
+.footer {
+    text-align: center;
+}
+
+.links {
+    align-content: stretch;
+    display: flex;
+    list-style: none;
+}
+
+.links li {
+    flex: 1;
+    margin: 1em;
+}
+
+.project:first-child,
+.links li:first-child {
+    margin-left: 0;
+}
+
+.project:last-child,
+.links li:last-child {
+    margin-right: 0;
+}
+
+
+@media (max-width: 45em) {
+    body {
+        margin: 1em;
+    }
+
+    .projects-row,
+    .links {
+        display: block;
+    }
+
+    .project,
+    .links li {
+        margin: 1em 0;
+    }
+}

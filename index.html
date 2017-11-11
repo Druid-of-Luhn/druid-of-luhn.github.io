@@ -1,13 +1,154 @@
----
-layout: default
-title: About
----
-<article class="post__content">
-    <p class="text__intro">I'm <strong>Billy Brown</strong>, a young developer from Belgium, currently in my fifth year of study of a 5-year masters <strong>Computer Science</strong> course at <a href="https://www.st-andrews.ac.uk/" title="St Andrews University">St&nbsp;Andrews University</a>, Scotland. My topics of study include systems programming, computational complexity, artificial intelligence, computer security and more, lending me both knowledge and experience in many fields of Computer Science.</p>
+<!DOCTYPE html>
+<html lang="en" role="document">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
+        <meta name="author" content="Billy Brown">
+        <meta name="description" content="I'm Billy Brown and I am currently in my final year of an MSci degree in Computer Science at the University of St Andrews, Scotland.">
 
-    <p>I am currently a Databases and IT Intern at the University of St Andrews <a href="https://www.st-andrews.ac.uk/development/" title="St Andrews University Development Office">Development Office</a>, where I build .NET web applications with Microsoft C#, ASP and SQLServer.</p>
+        <title>Billy Brown</title>
 
-    <p>Last summer (June-August 2017) I worked on my project for the <a href="https://www.st-andrews.ac.uk/students/involve/laidlaw/">The Laidlaw Scholarship Programme in Research and Leadership</a>. Working in <strong>constraint programming</strong> with Essence, my task was to add a <strong>specification strengthening</strong> feature to <a href="https://github.com/Druid-of-Luhn/conjure">Conjure: The Automated Constraint Modelling Tool</a>, which infers tighter variable domains and new constraints without losing solutions. I applied the tool to the problems on <a href="http://csplib.org">csplib</a>, <strong>improving</strong> their solve time in some cases. This is also my first major contribution to <strong>open source software</strong>.</p>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i|Open+Sans:400" rel="stylesheet"> 
+    </head>
+    <body>
 
-    <p>I try to maintain a visible internet presence on <a href="https://twitter.com/_Billy_Brown" role="link">Twitter</a> and <a href="https://github.com/Druid-of-Luhn" role="link">GitHub</a>, where you can hear of and take a look at my various projects.</p>
-</article>
+        <header class="header">
+            <h1 class="title">Billy Brown</h1>
+
+            <p class="introduction">
+            Final year <em>MSci Computer Science</em> student at the <a href="https://www.st-andrews.ac.uk/" title="University of St Andrews website">University of St&nbsp;Andrews</a>, Scotland.
+            </p>
+
+            <ul class="interests">
+                <li>Game Development</li>
+                <li>Language Design</li>
+                <li>Artificial Intelligence</li>
+                <li>Systems Programming</li>
+                <li>Networking</li>
+                <li>Web Development</li>
+                <li>Korfball</li>
+                <li>Old English</li>
+            </ul>
+        </header>
+
+        <main>
+
+        <div class="projects-row">
+            <article class="project">
+                <h2 class="project-title">Conjure</h2>
+                <p class="project-description">
+                Essence model strengthening for <a href="https://github.com/conjure-cp/conjure" title="Conjure: The Automated Constraint Modelling Tool.">Conjure</a>: The Automated Constraint Modelling Tool.
+                </p>
+                <p>
+                Completed as part of the <a href="https://www.st-andrews.ac.uk/students/involve/laidlaw/" title="Laidlaw Scholarship Programme in Research and Leadership">Laidlaw Scholarship Programme</a> in Research and Leadership during a 10 week internship.
+                </p>
+                <p>
+                The project adds functionality to automatically infer new constraints and tighten others in a specification. Programming done in Haskell, benchmarking in Python and R.
+                </p>
+                <p>
+                <a href="https://github.com/conjure-cp/conjure/pull/379" title="Merged GitHub pull request">
+                    Merged GitHub Pull Request
+                </a>
+                </p>
+            </article>
+
+            <article class="project">
+                <h2 class="project-title">cropper.js</h2>
+                <p class="project-description">
+                Simple interactive JavaScript image uploading and cropping facility for the browser.
+                </p>
+                <p>
+                Originally completed as part of my internship at the University of St&nbsp;Andrews <a href="https://www.st-andrews.ac.uk/development/" title="University of St Andrews Development Office">Development Office</a>.
+                </p>
+                <p>
+                The project allows uploading an image to the browser, interactively cropping it to a desired size and optional aspect ratio while previewing the final result, and exporting it as a new image.
+                </p>
+                <p>
+                <a href="https://github.com/Druid-of-Luhn/cropper.js" title="GitHub repository">
+                    GitHub Repository
+                </a>
+                •
+                <a href="http://billy-brown.net/cropper.js/example.html" title="cropper.js example">
+                    Example Page
+                </a>
+                </p>
+            </article>
+        </div>
+
+        <div class="projects-row">
+            <article class="project">
+                <h2 class="project-title-small">MSci Project</h2>
+                <p class="project-description">
+                Probabilistic dependency parsing of discontinuous natural language. 
+                </p>
+                <p>
+                Built a shift-reduce parser for dependency structure natural language using existing data-driven methods and implementing a new one. Evaluating the new method and different machine learning-based classifiers (ANN, SVM).
+                </p>
+                <p class="small-text">Source code available upon request.</p>
+            </article>
+
+            <article class="project">
+                <h2 class="project-title-small">Senior Honours Project</h2>
+                <p class="project-description">
+                How effectively can genetic search algorithms balance turn-based strategy games? 
+                </p>
+                <p>
+                Built a basic turn-based strategy game with JavaFX, with an AI player. Performed genetic search on the game data in order to balance the gameplay. Inconclusive results.
+                </p>
+                <p class="small-text">Source code available upon request.</p>
+            </article>
+
+            <article class="project">
+                <h2 class="project-title-small">Junior Honours Project</h2>
+                <p class="project-description">
+                Online collaborative document editor: layer-based raster image editor.
+                </p>
+                <p>
+                As part of a group, built a raster image editor with a number of features implemented 
+                in the browser with JavaScript and a back end written in Node for saving and loading.
+                </p>
+                <p class="small-text">Source code available upon request.</p>
+            </article>
+        </div>
+
+        </main>
+
+        <footer class="footer">
+            <ul class="links">
+                <li>
+                    <a href="https://twitter.com/_Billy_Brown" title="Twitter: @_Billy_Brown">
+                        @_Billy_Brown
+                    </a>
+                    <br>
+                    Twitter
+                </li>
+                <li>
+                    <a href="https://github.com/Druid-of-Luhn" title="GitHub: Druid-of-Luhn">
+                        Druid-of-Luhn
+                    </a>
+                    <br>
+                    GitHub
+                </li>
+                <li>
+                    <a href="https://stackoverflow.com/users/1406083/billy-brown" title="StackOverflow: Billy Brown">
+                        Billy Brown
+                    </a>
+                    <br>
+                    StackOverflow
+                </li>
+                <li>
+                    <a href="https://codepen.io/_Billy_Brown" title="CodePen: Billy Brown">
+                        Billy Brown
+                    </a>
+                    <br>
+                    CodePen
+                </li>
+            </ul>
+            <p class="small-text">Copyright 2017 Billy Brown</p>
+        </footer>
+
+    </body>
+</html>
