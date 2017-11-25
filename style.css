@@ -24,6 +24,10 @@ code {
     font-size: 1.25em;
 }
 
+main ul {
+    line-height: 2;
+}
+
 h1,
 h2,
 input,
