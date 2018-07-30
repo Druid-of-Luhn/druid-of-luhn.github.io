@@ -1,0 +1,81 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+ol {
+    list-style: none;
+}
+
+th {
+    text-align: left;
+}
+
+.abilities,
+.feats,
+.spells {
+    border-bottom: 4px solid;
+    padding: 1em 0;
+}
+
+@media (max-width: 40em) {
+    .everything {
+        overflow-x: scroll;
+    }
+}
+
+@media (min-width: 40em) {
+    .table-of-contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+    }
+
+    .abilities,
+    .feats,
+    .spells {
+        column-count: 3;
+    }
+
+    .ability,
+    .feat,
+    .spell {
+        break-inside: avoid;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.everything {
+    padding: 2em 1em;
+}
+
+.everything a {
+    color: blue;
+}
+
+.theme-toggle:checked + .everything {
+    background-color: #1d1f21;
+    color: #f0f0f0;
+    font-family: 'Avenir Next', 'Helvetica Neue', sans-serif;
+}
+
+.theme-toggle:checked + .everything a {
+    color: yellow;
+}

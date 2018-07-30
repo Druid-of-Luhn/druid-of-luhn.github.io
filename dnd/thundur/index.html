@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Þúndur</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input type="checkbox" class="theme-toggle" checked></input>
+        <div class="everything">
+            <h1>Þúndur</h1>
+
+            <article class="table-of-contents">
+                <div class="toc__section">
+                    <h2>Feats</h2>
+                    <ol>
+                        <li><a href="#scribe-scroll">Scribe Scroll</a></li>
+                        <li><a href="#skald-s-vigor">Skald's Vigor</a></li>
+                        <li><a href="#power-attack">Power Attack</a></li>
+                        <li><a href="#toughness">Toughness</a></li>
+                        <li><a href="#lingering-performance">Lingering Performance</a></li>
+                    </ol>
+                </div>
+
+                <div class="toc__section">
+                    <h2>Special Abilities</h2>
+                    <ol>
+                        <li><a href="#raging-song">Raging Song</a></li>
+                        <li><a href="#bardic-knowledge">Bardic Knowledge</a></li>
+                        <li><a href="#versatile-performance">Versatile Performance</a></li>
+                        <li><a href="#well-versed">Well-versed</a></li>
+                        <li>
+                            <a href="#rage-powers">Rage Powers</a>
+                            <ol>
+                                <li><a href="#lesser-celestial-totem">Lesser Celestial Totem</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#uncanny-dodge">Uncanny Dodge</a></li>
+                        <li><a href="#spell-kenning">Spell Kenning</a></li>
+                    </ol>
+                </div>
+
+                <div class="toc__section">
+                    <h2>Known Spells</h2>
+                    <ol>
+                        <li>
+                            <a href="#level-0">Level 0</a>
+                            <ol>
+                                <li><a href="#detect-magic">Detect Magic</a></li>
+                                <li><a href="#ghost-sound">Ghost Sound</a></li>
+                                <li><a href="#light">Light</a></li>
+                                <li><a href="#lullaby">Lullaby</a></li>
+                                <li><a href="#mage-hand">Mage Hand</a></li>
+                                <li><a href="#message">Message</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#level-1">Level 1</a>
+                            <ol>
+                                <li><a href="#aspect-of-the-nightingale">Aspect of the Nightingale</a></li>
+                                <li><a href="#cure-light-wounds">Cure Light Wounds</a></li>
+                                <li><a href="#restful-sleep">Restful Sleep</a></li>
+                                <li><a href="#sleep">Sleep</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#level-2">Level 2</a>
+                            <ol>
+                                <li><a href="#allegro">Allegro</a></li>
+                                <li><a href="#cure-moderate-wounds">Cure Moderate Wounds</a></li>
+                                <li><a href="#path-of-glory">Path of Glory</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                    <h2>Spells of Interest</h2>
+                    <ol>
+                        <li>
+                            <a href="#level-2">Level 2</a>
+                            <ol>
+                                <li><a href="https://www.d20pfsrd.com/magic/all-spells/a/acute-senses">Acute Senses</a></li>
+                                <li><a href="https://www.d20pfsrd.com/magic/all-spells/a/alter-summoned-monster">Alter Summoned Monster</a></li>
+                                <li><a href="https://www.d20pfsrd.com/magic/all-spells/a/arcane-disruption">Arcane Disruption</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            
+            <h2 id="feats">Feats</h2>
+
+            <div class="feats">
+                
+                <article class="feat">
+                    <h3 id="scribe-scroll" class="feat__title">
+                        <a href="https://www.d20pfsrd.com/feats/item-creation-feats/scribe-scroll-item-creation-final/">Scribe Scroll (Item Creation)</a>
+                    </h3>
+
+                    <p>You can create magic scrolls.</p>
+                    <p><strong>Prerequisite</strong>: Caster level 1st.</p>
+                    <p><strong>Benefit</strong>: You can create a <a href="https://www.d20pfsrd.com/magic-items/scrolls">scroll</a> of any spell that you know. Scribing a scroll takes 2 hours if its base price is 250 gp or less, otherwise scribing a scroll takes 1 day for each 1000 gp in its base price. To scribe a scroll, you must use up raw materials costing half of this base price.</p>
+                    <p>See <a href="https://www.d20pfsrd.com/magic-items#TOC-Magic-Item-Creation">magic item creation rules</a> for more information.</p>
+                </article>
+
+                <article class="feat">
+                    <h3 id="skald-s-vigor" class="feat__title">
+                        <a href="https://www.d20pfsrd.com/feats/general-feats/skald-s-vigor/">Skald's Vigor</a>
+                    </h3>
+
+                    <p><i>Your song and your enthusiasm combine to invigorate you in battle.</i></strong>
+                <p><strong>Prerequisite(s)</strong>: <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald#TOC-Raging-Song-Su-">Raging song</a> class feature.</p>
+                <p><strong>Benefit</strong>: While maintaining a raging song, you gain <a href="https://www.d20pfsrd.com/bestiary/rules-for-monsters/universal-monster-rules/#Fast_Healing_Ex">fast healing</a> equal to the Strength bonus your song provides, starting in the round after you begin the song. If you stop maintaining your song, the fast healing ends, even if the effects of your song persist.</p>
+                </article>
+
+                <article class="feat">
+                    <h3 id="power-attack" class="feat__title">
+                        <a href="https://www.d20pfsrd.com/feats/combat-feats/power-attack-combat-final/">Power Attack (Combat)</a>
+                    </h3>
+
+                    <p><i>You can make exceptionally deadly mêlée attacks by sacrificing accuracy for strength.</i></p>
+                    <p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p>
+                    <p><strong>Benefit</strong>: You can choose to take a -1 penalty on all mêlée attack rolls and combat manoeuvre checks to gain a +2 bonus on all mêlée damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon.</p>
+                    <p>When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2.</p>
+                    <p>You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>
+                </article>
+
+                <article class="feat">
+                    <h3 id="toughness" class="feat__title">
+                        <a href="https://www.d20pfsrd.com/feats/general-feats/toughness-final/">Toughness</a>
+                    </h3>
+
+                    <p>You have enhanced physical stamina.</p>
+                    <p><strong>Benefit</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>
+                </article>
+
+                <article class="feat">
+                    <h3 id="lingering-performance" class="feat__title">
+                        <a href="https://www.d20pfsrd.com/feats/general-feats/lingering-performance/">Lingering Performance</a>
+                    </h3>
+
+                    <p>The effects of your bardic performance carry on, even after you have stopped performing.</p>
+                    <p><strong>Prerequisite</strong>: Bardic performance class feature.</p>
+                    <p><strong>Benefit</strong>: The bonuses and penalties from your bardic performance continue for 2 rounds after you cease performing. Any other requirement, such as range or specific conditions, must still be met for the effect to continue. If you begin a new bardic performance during this time, the effects of the previous performance immediately cease.</p>
+                </article>
+
+            </div>
+
+            <div class="abilities">
+                
+                <article class="ability">
+                    <h3 id="raging-song" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Raging-Song-Su-">Raging Song (SU)</a>
+                    </h3>
+
+                    <p>A skald is trained to use music, oration, and similar performances to inspire his allies to feats of strength and ferocity. At 1st level, a skald can use this ability for a number of rounds per day equal to 3 + his Charisma modifier. For each level thereafter, he can use raging song for 2 additional rounds per day.</p>
+                    <p>Starting a raging song is a standard action, but it can be maintained each round as a free action. A raging song cannot be disrupted, but it ends immediately if the skald is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action each round to maintain it. A raging song counts as the <a href="https://www.d20pfsrd.com/classes/core-classes/bard#TOC-Bardic-Performance">bard's bardic performance</a> special ability for any effect that affects bardic performances. A skald may learn bard masterpieces.</p>
+                    <p>A raging song has audible components, but not visual components. Affected allies must be able to hear the skald for the song to have any effect. A deaf skald has a 20% chance to fail when attempting to use a raging song. If he fails this check, the attempt still counts against his daily limit. Deaf creatures are immune to raging songs.</p>
+                    <p>If a raging song affects allies, when the skald begins a raging song and at the start of each ally's turn in which they can hear the raging song, the skald's allies must decide whether to accept or refuse its effects. This is not an action. Unconscious allies automatically accept the song. If accepted, the raging song's effects last for that ally's turn or until the song ends, whichever comes first.</p>
+                    <ol>
+                        <li><em>Inspired Rage (Su)</em> At 1st level, affected allies gain a +2 morale bonus to Strength and Constitution and a +1 morale bonus on Will saving throws, but also take a –1 penalty to AC. While under the effects of inspired rage, allies other than the skald cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration. At 4th level and every 4 levels thereafter, the song's bonuses on Will saves increase by 1; the penalty to AC doesn't change. At 8th and 16th levels, the song's bonuses to Strength and Constitution increase by 2. (Unlike the barbarian's rage ability, those affected are not fatigued after the song ends.) If an ally has her own rage class ability (such as barbarian's rage, bloodrager's bloodrage, or skald's inspired rage), she may use the Strength, Constitution, and Will saving throw bonuses, as well as AC penalties, based on her own ability and level instead of those from the skald (still suffering no fatigue afterward). However, inspired rage does not allow the ally to activate abilities dependent on other rage class abilities, such as rage powers, blood casting, or bloodrager bloodlines; the ally must activate her own rage class ability in order to use these features.</li>
+                        <li><em>Song of Marching (Su)</em> At 3rd level, a skald can use raging song to inspire his allies to move faster without suffering from fatigue. By expending 1 round of raging song, the skald invigorates allies within 60 feet, who may hustle for the next hour; this movement counts as a walk (not a hustle) for the purpose of accruing nonlethal damage and fatigue. The skald must continue to perform the song for the remainder of the hour, otherwise its effects end, but only 1 round of raging song is expended for that hour.</li>
+                    </ol>
+                    <h4>Sagas</h4>
+                    <p>Sagas are specialized applications of a skald's raging song ability, functioning much like <a href="https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces">bardic masterpieces</a> but are available only to skalds. Sagas are never purely artistic constructs; they are designed to preserve lore or commemorate historical figures, and are usually based in fact. Sagas therefore require ranks in Knowledge (history) as a prerequisite, as well. Bards can learn sagas, using their <a href="https://www.d20pfsrd.com/classes/core-classes/bard#TOC-Bardic-Performance">bardic performance</a> ability instead of raging song.</p>
+
+                    <p><a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/skald-sagas">See list of sagas here.</a></p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="bardic-knowledge" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Bardic-Knowledge-Ex-">Bardic Knowledge (Ex)</a>
+                    </h3>
+
+                    <p>A skald adds 1/2 his class level (minimum 1) on all Knowledge skill checks, and may make all Knowledge skill checks untrained.</p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="versatile-performance" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Versatile-Performance-Ex-">Versatile Performance (Ex)</a>
+                    </h3>
+
+                    <p>At 2nd level, a skald can choose one type of Perform skill associated with the skald class. He can use his bonus in that skill in place of his bonus in the associated skills listed below. When substituting in this way, the skald uses his total Perform skill bonus, including class skill bonus, in place of the associated skill's bonus, whether or not he has ranks in that skill or if it is a class skill. At 7th level, and every 5 levels thereafter, the bard can select an additional type of Perform to substitute.</p>
+                    <p>The types of Perform and their associated skills are:</p>
+                    <table>
+                        <tr><th>Oratory</th><td>Diplomacy</td><td>Sense Motive</td></tr>
+                        <tr><th>Percussion</th><td>Handle Animal</td><td>Intimidate</td></tr>
+                        <tr><th>Sing</th><td>Bluff</td><td>Sense Motive</td></tr>
+                        <tr><th>String</th><td>Bluff</td><td>Diplomacy</td></tr>
+                        <tr><th>Wind</th><td>Diplomacy</td><td>Handle Animal</td></tr>
+                    </table>
+                </article>
+
+                <article class="ability">
+                    <h3 id="well-versed" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Well-Versed-Ex-">Well Versed (Ex)</a>
+                    </h3>
+
+                    <p>At 2nd level, the skald becomes resistant to sonic effects. The skald gains a +4 bonus on saving throws made against bardic performance, as well as all sonic or language-dependent effects.</p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="rage-powers" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Rage-Powers-Ex-">Rage Powers (Ex)</a>
+                    </h3>
+
+                    <p>At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).</p>
+                    <p>Unless otherwise noted, a skald cannot select an individual rage power more than once.</p>
+                    <p>When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.</p>
+                    <p>If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).</p>
+                    <p>If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).</p>
+                    <p>If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.</p>
+                    <p>If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well.</p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="lesser-celestial-totem" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/core-classes/barbarian/rage-powers/paizo-rage-powers/celestial-totem-lesser-su">Celestial Totem, Lesser (Su)</a>
+                    </h3>
+                    
+                    <p><i>While raging, the barbarian benefits from increased magical healing.</i></p>
+                    <p>Whenever she is subject to a spell that cures hit point damage, she heals 1 additional point of damage per caster level. In the case of non-spell healing effects (such as channeled energy or lay on hands), she heals a number of additional points equal to the class level of the character performing the magical healing. This does not affect fast healing or regeneration.</p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="uncanny-dodge" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Uncanny-Dodge-Ex-">Uncanny Dodge (Ex)</a>
+                    </h3>
+
+                    <p>At 4th level, a skald gains the ability to react to danger before his senses would normally allow him to do so. He cannot be caught flat-footed, nor does he lose his Dex bonus to AC if the attacker is invisible. He still loses his Dexterity bonus to AC if he is immobilized. A skald with this ability can still lose his Dexterity bonus to AC if an opponent successfully uses the feint action against him.</p>
+                    <p>If a skald already has uncanny dodge from a different class, he automatically gains improved uncanny dodge (see below) instead.</p>
+                </article>
+
+                <article class="ability">
+                    <h3 id="spell-kenning" class="ability__title">
+                        <a href="https://www.d20pfsrd.com/classes/hybrid-classes/skald/#TOC-Spell-Kenning-Su-">Spell Kenning (Su)</a>
+                    </h3>
+
+                    <p>At 5th level, a skald is learned in the magic of other spellcasters, and can use his own magic to duplicate those classes’ spells. Once per day, a skald can cast any spell on the bard, cleric, or sorcerer/wizard spell list as if it were one of his skald spells known, expending a skald spell slot of the same spell level to cast the desired spell. Casting a spell with spell kenning always has a minimum casting time of 1 full round, regardless of the casting time of the spell.</p>
+                    <p>At 11th level, a skald can use this ability twice per day. At 17th level, he can use this ability three times per day.</p>
+                </article>
+
+            </div>
+
+            <h2 id="level-0">Level 0</h2>
+
+            <table>
+                <tr>
+                    <th>Spell Save DC</th>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <th>Spells Per Day</th>
+                    <td>&infin;</td>
+                </tr>
+            </table>
+
+            <div class="spells">
+
+                <article class="spell">
+                    <h3 id="detect-magic" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/d/detect-magic/">Detect Magic</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>divination</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>60ft</td>
+                        </tr>
+                        <tr>
+                            <th>Area</th><td>cone-shaped emanation</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>concentration, up to 1 min./level (D)</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You detect magical auras. The amount of information revealed depends on how long you study a particular area or subject.</p>
+
+                        <table>
+                            <tr>
+                                <td>1st Round</td>
+                                <td>Presence or absence of magical auras.</td>
+                            </tr>
+                            <tr>
+                                <td>2nd Round</td>
+                                <td>Number of different magical auras and the power of the most potent aura.</td>
+                            </tr>
+                            <tr>
+                                <td>3rd Round</td>
+                                <td>The strength and location of each aura. If the items or creatures bearing the auras are in line of sight, you can make Knowledge (arcana) skill checks to determine the school of magic involved in each. (Make one check per aura: DC 15 + spell level, or 15 + 1/2 caster level for a nonspell effect.) If the aura emanates from a magic item, you can attempt to identify its properties (see Spellcraft).</td>
+                            </tr>
+                        </table>
+
+                        <p>Magical areas, multiple types of magic, or strong local magical emanations may distort or conceal weaker auras.</p>
+
+                        <p><em>Aura Strength</em>: An aura's power depends on a spell's functioning spell level or an item's caster level; see the accompanying table. If an aura falls into more than one category, detect magic indicates the stronger of the two.</p>
+
+                        <table>
+                            <tr>
+                                <th rowspan="2">Spell or Object</th>
+                                <th colspan="4">Aura Power</th>
+                            </tr>
+                            <tr>
+                                <th>Faint</th><th>Moderate</th><th>Strong</th><th>Overwhelming</th>
+                            </tr>
+                            <tr>
+                                <th>Functioning spell (spell level)</th>
+                                <td>3rd or lower</td>
+                                <td>4th-6th</td>
+                                <td>7th-9th</td>
+                                <td>10th+ (deity-level)</td>
+                            </tr>
+                            <tr>
+                                <th>Magic item (caster level)</th>
+                                <td>5th or lower</td>
+                                <td>6th-11th</td>
+                                <td>12th-20th</td>
+                                <td>21st+ (artifact)</td>
+                            </tr>
+                        </table>
+
+                        <p><em>Lingering Aura</em>: A magical aura lingers after its original source dissipates (in the case of a spell) or is destroyed (in the case of a magic item). If detect magic is cast and directed at such a location, the spell indicates an aura strength of dim (even weaker than a faint aura). How long the aura lingers at this dim level depends on its original power:</p>
+
+                        <table>
+                            <tr><th>Original Strength</th><th>Duration of Lingering Aura</th></tr>
+                            <tr><td>Faint</td><td>1d6 rounds</td></tr>
+                            <tr><td>Moderate </td><td>1d6 minutes</td></tr>
+                            <tr><td>Strong</td><td>1d6x10 minutes</td></tr>
+                            <tr><td>Overwhelming</td><td>1d6 days</td></tr>
+                        </table>
+
+                        <p>Outsiders and elementals are not magical in themselves, but if they are summoned, the conjuration spell registers. Each round, you can turn to detect magic in a new area. The spell can penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt blocks it.</p>
+
+                        <p>Detect magic can be made permanent with a <em>permanency</em> spell.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="ghost-sound" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/g/ghost-sound/">Ghost Sound</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>illusion (figment)</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S, M (a bit of wool or a small lump of wax)</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>close (25 ft. + 5 ft./2 levels)</td>
+                        </tr>
+                        <tr>
+                            <th>Effect</th><td>illusory sounds</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>1 round/level (D)</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>Will disbelief</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>Ghost sound allows you to create a volume of sound that rises, recedes, approaches, or remains at a fixed place. You choose what type of sound ghost sound creates when casting it and cannot thereafter change the sound's basic character.</p>
+                        <p>The volume of sound created depends on your level. You can produce as much noise as four normal humans per caster level (maximum 40 humans). Thus, talking, singing, shouting, walking, marching, or running sounds can be created. The noise a ghost sound spell produces can be virtually any type of sound within the volume limit. A horde of rats running and squeaking is about the same volume as eight humans running and shouting. A roaring lion is equal to the noise from 16 humans, while a roaring dragon is equal to the noise from 32 humans. Anyone who hears a ghost sound receives a Will save to disbelieve.</p>
+                        <p>Ghost sound can enhance the effectiveness of a <em>silent image</em> spell.</p>
+                        <p>Ghost sound can be made permanent with a <em>permanency</em> spell.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="light" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/l/light">Light</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>evocation [light]</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, M/DF (a firefly)</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>touch</td>
+                        </tr>
+                        <tr>
+                            <th>Target</th><td>object touched</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>10 min./level</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>This spell causes a touched object to glow like a torch, shedding normal light in a 20-foot radius from the point touched, and increasing the light level for an additional 20 feet by one step, up to normal light (darkness becomes dim light, and dim light becomes normal light). In an area of normal or bright light, this spell has no effect. The effect is immobile, but it can be cast on a movable object.</p>
+                        <p>You can only have one light spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent (through <em>permanency</em> or a similar effect), it does not count against this limit. Light can be used to counter or dispel any darkness spell of equal or lower spell level.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="lullaby" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/l/lullaby">Lullaby</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>enchantment (compulsion)</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>medium (100 ft. + 10 ft./level)</td>
+                        </tr>
+                        <tr>
+                            <th>Area</th><td>living creatures within a 10-ft.-radius burst</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>concentration + 1 round/level (D)</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>Will negates</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>yes</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>Any creature within the area that fails a Will save becomes drowsy and inattentive, taking a -5 penalty on Perception checks and a -2 penalty on Will saves against sleep effects while the lullaby is in effect. Lullaby lasts for as long as the caster concentrates, plus up to 1 round per caster level thereafter.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="mage-hand" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/m/mage-hand">Mage Hand</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>transmutation</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>close (25 ft. + 5 ft./2 levels)</td>
+                        </tr>
+                        <tr>
+                            <th>Target</th><td>one non-magical, unattended object weighing up to 5 lbs.</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>concentration</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You point your finger at an object and can lift it and move it at will from a distance. As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell's range.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="message" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/m/message">Message</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>transmutation [language-dependent]</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S, F (a piece of copper wire)</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>medium (100 ft. + 10 ft./level)</td>
+                        </tr>
+                        <tr>
+                            <th>Targets</th><td>one creature/level</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>10 min./level</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You can whisper messages and receive whispered replies. Those nearby can hear these messages with a DC 25 Perception check. You point your finger at each creature you want to receive the message. When you whisper, the whispered message is audible to all targeted creatures within range. Magical <em>silence</em>, 1 foot of stone, 1 inch of common metal (or a thin sheet of lead), or 3 feet of wood or dirt blocks the spell. The message does not have to travel in a straight line. It can circumvent a barrier if there is an open path between you and the subject, and the path's entire length lies within the spell's range. The creatures that receive the message can whisper a reply that you hear. The spell transmits sound, not meaning; it doesn't transcend language barriers. To speak a message, you must mouth the words and whisper.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <h2 id="level-1">Level 1</h2>
+            <table>
+                <tr><th>Spell Save DC</th><td>15</td></tr>
+                <tr><th>Spells Per Day</th><td>4 + 1</td></tr>
+            </table>
+
+            <div class="spells">
+
+                <article class="spell">
+                    <h3 id="aspect-of-the-nightingale" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/a/aspect-of-the-nightingale/">Aspect of the Nightingale</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>transmutation (polymorph)</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S, DF</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>personal</td>
+                        </tr>
+                        <tr>
+                            <th>Target</th><td>you</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>1 minute/level</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You take on an aspect of a nightingale. Your voice becomes clear and pleasant. You gain a +2 competence bonus on Perform (sing) checks and a +2 competence bonus on Diplomacy checks. Once per minute, if you are subject to a charm effect that allows a saving throw, you may roll twice and take the more favorable result.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="cure-light-wounds" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/c/cure-light-wounds">Cure Light Wounds</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>conjuration (healing)</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>touch</td>
+                        </tr>
+                        <tr>
+                            <th>Target</th><td>creature touched</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>instantaneous</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>Will half (harmless); see text</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>yes (harmless); see text</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>When laying your hand upon a living creature, you channel positive energy that cures 1d8 points of damage +1 point per caster level (maximum +5). Since undead are powered by negative energy, this spell deals damage to them instead of curing their wounds. An undead creature can apply Spell Resistance, and can attempt a Will save to take half damage.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="restful-sleep" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/r/restful-sleep/">Restful Sleep</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>necromancy</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>10 minutes</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S, M (a pinch of sand)</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>close (25 ft. + 5 ft./2 levels)</td>
+                        </tr>
+                        <tr>
+                            <th>Targets</th><td>one creature/level, no two of which can be more than 30 ft. apart</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>8 hours or 24 hours; see text</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>Fortitude negates (harmless)</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>yes (harmless)</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You cast this spell immediately prior to resting. While under the effects of this spell, you and your allies enjoy a restful night's <em>sleep</em>. If a subject completes a full night's rest, it regains hit points as if it had undergone a full day of bed rest (regaining twice its character level in hit points). If a subject completes a full day's rest, it regains three times its character level in hit points. Any significant interruption during the rest (such as being awoken) prevents any healing that night and ends the effect of this spell on the awakened subject. Any healing acquired while under the effects of restful sleep is considered natural healing, and has no affect on effects requiring magical healing to cure.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="sleep" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/s/sleep">Sleep</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>enchantment (compulsion) [mind-affecting]</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 round</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S, M (fine sand, rose petals, or a live cricket)</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>medium (100 ft. + 10 ft./level)</td>
+                        </tr>
+                        <tr>
+                            <th>Area</th><td>one or more living creatures within a 10-ft.-radius burst</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>1 min./level</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>Will negates</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>yes</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>A <em>sleep</em> spell causes a magical slumber to come upon 4 HD of creatures. Creatures with the fewest HD are affected first. Among creatures with equal HD, those who are closest to the spell's point of origin are affected first. HD that are not sufficient to affect a creature are wasted. Sleeping creatures are helpless. Slapping or wounding awakens an affected creature, but normal noise does not. Awakening a creature is a standard action (an application of the aid another action). Sleep does not target unconscious creatures, constructs, or undead creatures.</p>
+                    </div>
+                </article>
+            </div>
+
+            <h2 id="level-2">Level 2</h2>
+
+            <table>
+                <tr><th>Spell Save DC</th><td>16</td></tr>
+                <tr><th>Spells Per Day</th><td>2 + 1</td></tr>
+            </table>
+
+            <div class="spells">
+
+                <article class="spell">
+                    <h3 id="allegro" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/a/allegro">Allegro</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>transmutation</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 Standard Action</td>
+                        </tr>
+                        <tr>
+                            <th>Components</th><td>V</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>personal</td>
+                        </tr>
+                        <tr>
+                            <th>Target</th><td>you</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>1 round/level (D) or until discharged </td>
+                        </tr>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>This spell allows you to act more swiftly while maintaining a bardic performance. You must already be maintaining a bardic performance before you can cast allegro. You gain the benefits of the spell haste for as long as you maintain that bardic performance. If you cease maintaining the bardic performance or it is interrupted, this spell’s duration ends. As an immediate action while you are maintaining a bardic performance, you can dismiss allegro to reroll a Reflex save or Dexterity-based skill check. You must choose to reroll before the result of the original roll is known. You must take the result of the reroll, even if it’s worse than the original roll. Allegro dispels and is dispelled by slow.</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="cure-moderate-wounds" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/c/cure-moderate-wounds">Cure Moderate Wounds</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>conjuration (healing)</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>This spell functions like <em><a href="#cure-light-wounds">cure light wounds</a></em>, except that it cures 2d8 points of damage + 1 point per caster level (maximum +10).</p>
+                    </div>
+                </article>
+
+                <article class="spell">
+                    <h3 id="path-of-glory" class="spell__title">
+                        <a href="https://www.d20pfsrd.com/magic/all-spells/p/path-of-glory/">Path of Glory</a>
+                    </h3>
+
+                    <table class="spell__info">
+                        <tr>
+                            <th>School</th><td>conjuration (healing)</td>
+                        </tr>
+                        <tr>
+                            <th>Casting Time</th><td>1 standard action</td>
+                        </tr>
+                        <tr>
+                            <th>Component</th><td>V, S</td>
+                        </tr>
+                        <tr>
+                            <th>Range</th><td>touch (see text)</td>
+                        </tr>
+                        <tr>
+                            <th>Area</th><td>four 5-ft. squares/level (see text)</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th><td>1 round/level</td>
+                        </tr>
+                        <tr>
+                            <th>Saving Throw</th><td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Spell Resistance</th><td>no</td>
+                        </tr>
+                    </table>
+
+                    <div class="spell__content">
+                        <p>You cause four 5-foot squares (one of which must be your space) to glow with dim illumination. Starting on your next turn, as a swift action you can extend the glowing area by an additional four 5-foot squares; each new square must be adjacent to a square that was previously glowing. Allies that end their turns on a glowing square (including one who falls unconscious in the square) are healed of 1 point of damage.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </body>
+</html>
