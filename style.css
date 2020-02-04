@@ -58,6 +58,15 @@ textarea,
     font-size: 2.5em;
 }
 
+.navigation {
+    display: flex;
+    justify-items: space-around;
+}
+
+.navigation-item {
+    flex: 1;
+}
+
 .introduction {
     font-size: 1.25em;
 }
