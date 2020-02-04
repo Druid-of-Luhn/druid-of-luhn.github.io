@@ -1,0 +1,61 @@
+.dominion {
+    border: 1px solid #f0f0f0;
+    border-radius: 0.25em;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.dominion > :last-child {
+    margin-bottom: 0;
+}
+
+.dominion-header {
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.dominion-title {
+    flex: 1;
+    margin: 0;
+    order: 1;
+}
+
+.dominion-games {
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    order: 3;
+    padding: 0;
+    width: 100%;
+}
+
+.dominion-game {
+    display: inline;
+}
+
+.dominion-game:not(:last-of-type):after {
+    content: ', ';
+}
+
+.dominion-date {
+    flex: 1;
+    order: 2;
+}
+
+.dominion-cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dominion-card {
+    display: inline-block;
+}
+
+.dominion-card:not(:last-of-type):after {
+    content: ' • ';
+}
