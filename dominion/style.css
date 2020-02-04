@@ -19,13 +19,13 @@
 }
 
 .dominion-title {
-    flex: 1;
+    flex: 3 3 auto;
     margin: 0;
     order: 1;
 }
 
 .dominion-games {
-    flex: 1;
+    flex: 4 4 100%;
     list-style: none;
     margin: 0;
     order: 3;
@@ -42,8 +42,9 @@
 }
 
 .dominion-date {
-    flex: 1;
+    flex: 1 1 auto;
     order: 2;
+    text-align: right;
 }
 
 .dominion-cards {
