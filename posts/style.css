@@ -1,0 +1,36 @@
+.post-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 0.25em;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.post-card > :last-child {
+    margin-bottom: 0;
+}
+
+.post-card-header {
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.post-card-title {
+    flex: 3 3 auto;
+    font-family: "Arvo", "Open Sans", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    order: 1;
+}
+
+.post-card-date {
+    flex: 1 1 auto;
+    order: 2;
+    text-align: right;
+}
+
+.post-card-summary {
+}

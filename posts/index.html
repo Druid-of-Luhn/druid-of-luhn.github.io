@@ -6,11 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
         <meta name="author" content="Billy Brown">
-        <meta name="description" content="Send me an email using my contact form.">
+        <meta name="description" content="Some posts that I have written.">
 
-        <title>Contact | Billy Brown</title>
+        <title>Posts | Billy Brown</title>
 
         <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i|Open+Sans:400" rel="stylesheet"> 
 
         <!-- Favicons -->
@@ -45,61 +46,44 @@
 
         <header class="header">
             <h1 class="title"><a href=".." title="Homepage">Billy Brown</a></h1>
+
             <nav class="navigation">
                 <a href=".." title="Homepage" class="navigation-item">/homepage</a>
-                <a href="../posts" title="Posts" class="navigation-item">/posts</a>
+                <a href="." title="Posts" class="navigation-item">/posts</a>
                 <a href="../dominion" title="Dominion Card Sets" class="navigation-item">/dominion</a>
                 <a href="../games" title="Games" class="navigation-item">/games</a>
             </nav>
         </header>
 
         <main>
-        <h2 class="subtitle">Contact</h2>
 
-        <p>
-        You can reach me on <a href="https://twitter.com/_Billy_Brown" title="Twitter: @_Billy_Brown">Twitter</a>, or by sending me an email with the form below:
-        </p>
+        <h2 class="subtitle">Posts</h2>
 
-        <form name="form6" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://druidofluhn.wufoo.com/forms/wz43hau0aoyxrx/">
+        <article class="post-card">
+            <header class="post-card-header">
+                <h3 class="post-card-title">
+                    <a href="scheme-pattern-match" title="Scheme Pattern Matching" class="post-card-link">
+                        Scheme Pattern Matching
+                    </a>
+                </h3>
+                <time datetime="2020-02-11" class="post-card-date">2020-02-11</time>
+            </header>
+            <p class="post-card-summary">
+                A simple implementation of basic pattern matching in Scheme.
+            </p>
+            <p class="post-card-summary">
+            While writing an interpreter in Scheme that executes an Abstract Syntax Tree (AST),
+            I sorely missed Haskell's pattern matching, which makes picking the code to run based on a node very simple.
+            </p>
+            <p class="post-card-summary">
+            Here follows the motivation for, explanation of and implementation of some simple Scheme code for basic pattern matching.
+            <a href="scheme-pattern-match" title="Scheme Pattern Matching">Read More</a>
+            </p>
+        </article>
 
-            <div class="form-row">
-                <label for="Field1">Name:</label>
-                <div class="first-name">
-                    <input id="Field1" name="Field1" type="text" value="" tabindex="1" required>
-                    <label for="Field1">First</label>
-                </div>
-                <div class="last-name">
-                    <input id="Field2" name="Field2" type="text" value="" tabindex="2" required>
-                    <label for="Field2">Last</label>
-                </div>
-                <div class="clear"></div>
-            </div>
-
-            <div class="form-row">
-                <label for="Field3">Email address:</label>
-                <input id="Field3" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" required>
-            </div>
-
-            <div class="form-row">
-                <label for="Field4">Message:</label>
-                <textarea id="Field4" name="Field4" spellcheck="true" tabindex="4" required></textarea>
-            </div>
-
-            <div class="form-row">
-                <input name="saveForm" type="submit" value="Submit">
-            </div>
-
-            <div class="display-none">
-                <label for="comment">Do Not Fill This Out</label>
-                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                <input type="hidden" id="idstamp" name="idstamp" value="dwRAaiURhOUMozaAvoxO8u9w14pdomgegkqlukFUoKM=">
-            </div>
-
-        </form> 
         </main>
 
-        <p class="small-text">Submitting this form will redirect you to another page. You can return with the back button.</p>
-<footer class="footer">
+        <footer class="footer">
             <ul class="links">
                 <li>
                     <a href="../contact" title="Contact me by email">
@@ -133,7 +117,7 @@
                     CodePen
                 </li>
             </ul>
-            <p class="small-text">Copyright 2019 Billy Brown</p>
+            <p class="small-text">Copyright 2020 Billy Brown</p>
         </footer>
 
     </body>
