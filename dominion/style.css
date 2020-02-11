@@ -20,6 +20,8 @@
 
 .dominion-title {
     flex: 3 3 auto;
+    font-family: "Arvo", "Open Sans", sans-serif;
+    font-size: 1.5em;
     margin: 0;
     order: 1;
 }
