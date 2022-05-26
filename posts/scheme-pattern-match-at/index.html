@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
         <meta name="author" content="Billy Brown">
-        <meta name="description" content="A simple implementation of basic pattern matching in Scheme.">
+        <meta name="description" content="A simple implementation of basic pattern matching in Scheme, with @-bindings.">
 
-        <title>Scheme Pattern Matching | Billy Brown</title>
+        <title>Scheme Pattern Matching with @-bindings | Billy Brown</title>
 
         <link rel="stylesheet" type="text/css" media="screen" href="../../style.css">
         <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i|Open+Sans:400" rel="stylesheet"> 
@@ -56,14 +56,22 @@
 
         <main>
 
-        <h2 class="subtitle">Scheme Pattern Matching</h2>
+        <h2 class="subtitle">Scheme Pattern Matching with @-bindings</h2>
 
         <p class="introduction">
-        While writing an interpreter in Scheme that executes an Abstract Syntax Tree (AST),
-        I sorely missed Haskell's pattern matching, which makes picking the code to run based on a node very simple.
+        In my <a href="../scheme-pattern-match" title="Scheme Pattern Matching">first post about pattern matching with Scheme</a>,
+        I mentioned that the main feature that I thought was missing was the ability to bind a pattern to an identifier,
+        while still matching on the internals of that pattern.
         </p>
         <p class="introduction">
-        Here follows the motivation for, explanation of and implementation of some simple Scheme code for basic pattern matching.
+        Haskell has a way of doing it with an <code>@</code> character, which might look this: <code>func (Just x@[_]) = x</code>.
+        In this post I show how I added that functionality to my pattern matching code.
+        </p>
+
+        <p>
+        That function's pattern match will ensure that the <code>Maybe</code> has a value, and that the value is a single-element list.
+        Instead of returning only the element from the list, or re-building the list from its single element, however,
+        it binds the <code>x</code> identifier to the singleton list that was passed and returns that.
         </p>
 
         <p>
@@ -72,144 +80,30 @@
         <a href="#source-code">inline</a>
         </p>
 
-        <p>
-        I made a quick DuckDuckGo search for "scheme pattern matching" and mostly got results for a particular
-        <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html" title="Structure and Interpretation of Computer Programs | MIT Press">SICP</a> exercise
-        (that I cannot find anymore)
-        and for <a href="https://thomas.gilray.org/scheme-2019/satoshi.pdf" title="Scheme Macros for Non-linear Pattern Matching with Backtrackingfor Non-free Data Types, by SATOSHI EGI">a paper</a> on pattern matching that used quite un-Scheme-like data constructors.
-        (I somehow missed <a href="https://docs.racket-lang.org/reference/match.html" title="9 Pattern Matching">this lovely Racket page</a>.)
-        </p>
-
-        <p>
-        Although decidedly Haskell-like, the pattern matching in the paper and (at a glance) in Racket's <code>match</code>
-        &ndash; which uses data constructors &ndash; did not feel entirely like Scheme:
-        I wished for a way of matching pure Scheme objects: lists, pairs and atoms.
-        The code described and presented below is my effort at a basic implementation of that.
-        </p>
-
-        <p>
-        Although it is not quite as powerful as Haskell or Racket's pattern matching,
-        nor perhaps is it perfect to use, it is simple and hopefully understandable to the average user.
-        Having used it so far only for the toy interpreter that I mentioned above, I found it incredibly useful,
-        and the only feature that I really miss is binding a destructured pattern.
-        In Haskell, I can do this: <code>func&nbsp;(Just&nbsp;x@[_])&nbsp;=&nbsp;x</code> to ensure that the list has exactly one element,
-        but to actually bind the variable <code>x</code> to the list element itself and not to its single value.
-        </p>
-
-        <p>
-        (<time datetime="2022-05-26">2022-05-26</time>)
-        The final part of that paragraph is no longer correct; I have added @-binding functionality to the pattern-matching code.
-        The updated code and instructions are in <a href="../scheme-pattern-match-at" title="Scheme Pattern Matching with @-bindings">the new post</a>,
-        while this post still has the old code and instructions (which apply to most of the functionality anyway).
-        </p>
-
-        <h4>A Motivating Example</h4>
-
-        <p>
-        The following example uses pattern matching on an AST node to print and return the variable name used in an expression,
-        and prints an error message with some diagnostic information if it fails:
-        </p>
-
-        <pre><code>(define (pattern-match/motivating-example)
-  (let ((e '(E (NAME (identifier . "x")))))
-    (pattern-match
-      e get
-      (('E ('NAME ('identifier . id)))
-       (printf "identifier: ~A~%" (get 'id))
-       (get 'id))
-      (x
-       (printf "Unexpected expression: ~A~%" (get 'x))
-       #f)))</code></pre>
-
-        <p>
-        Had the code used to match the nested AST node and to act on it been written "by hand",
-        then it would either use some complex nesting that makes the code hard to read and a chore to write (<a href="#example-A">example A</a>),
-        or it would use recursion and lose the context provided by a pattern match,
-        thus also matching structures that are not necessarily intended (<a href="#example-B">example B</a>).
-        </p>
-
-        <p>
-        The main advantage of the pattern match is that it enables me as the developer to declare what shape I expect the data to have,
-        and to decide upon which parts of it I wish to act (by binding them to names) in a minimal way.
-        As the reader, I can clearly see what data the code receives as input and what it does with it just below.
-        And finally as the maintainer, I get to easily extend the pattern match to new shapes of data without modifying the existing ones.
-        </p>
-
-        <p>
-        <u id="example-A">Example A</u>: complex nesting; works for <code>'(E (NAME (identifier . "x")))</code>,
-        but is hard to extend to <code>'(E (lparen) (E (NAME (identifier . "x"))) (rparen))</code> for example:
-        </p>
-
-        <pre><code>(define (pattern-match/example-A e)
-  (if (and (list? e)          (not (null? e))          (eqv? (car     e) 'E)
-           (list? (cadr   e)) (not (null? (cadr   e))) (eqv? (caadr   e) 'NAME)
-           (pair? (cadadr e)) (not (null? (cadadr e))) (eqv? (caadadr e) 'identifier))
-    (begin
-      (printf "identifier: ~A~%" (cdadadr e))
-      (cdadadr e))
-    (begin
-      (printf "Unexpected expression: ~A~%" e)
-      #f)))</code></pre>
-
-        <p>
-        <u id="example-B">Example B</u>: missing context; matches <code>'(E (NAME (identifier . "x")))</code>,
-        but also incorrectly matches <code>'(NAME (E (identifier . "x")))</code>:
-        </p>
-
-        <pre><code>(define (pattern-match/example-B e)
-  (if (and (pair? e) (not (null? e)))
-    (case (car e)
-      ((E NAME)
-       (pattern-match/example-B (cadr e)))
-      ((identifier)
-       (printf "identifier: ~A~%" (cdr e))
-       (cdr e))
-      (else
-        (printf "Unexpected expression: ~A~%" e)
-        #f))
-    (begin
-      (printf "Unexpected expression: ~A~%" e)
-      #f)))</code></pre>
-
         <h3>Usage</h3>
 
         <p>
-        Only the <code>pattern-match</code> macro is intended to be used directly.
-        The pattern matching logic itself however resides in the <code>pattern-match/bind</code> function,
-        which takes in a single value and a pattern, and returns a (possibly empty) list of bindings if the match was successful,
-        or <code>#f</code> if the value did not match the pattern.
+        The @-binding is an added feature to my existing pattern matching code, so please read its post first for an idea of how to use it.
+        </p>
+        
+        <p>
+        In order to use an @-binding in a pattern match, simply wrap the pattern in a pair, the first element of which is an identifier beginning with an <code>@</code> (at) symbol.
+        The new fifth example in the source code is reproduced below to show that.
         </p>
 
-        <p>
-        The pattern of a match should represent the code as it would be displayed, with the exception of symbols:
-        </p>
-
-        <ul>
-            <li>if you intend to match a symbol literally, it should be quoted in the pattern;</li>
-            <li>if you intend to bind a symbol to a value, it should not be quoted in the pattern.</li>
-        </ul>
-
-        <p>
-        For example, this pattern matches the list that contains the symbols <code>A</code> and <code>B</code>:
-        <code>('A 'B)</code>,
-        while this pattern matches any list that contains any two values, and binds them to <code>'A</code> and <code>'B</code>:
-        <code>(A B)</code>.
-        </p>
+        <pre><code>(define (pattern-match/example-5)
+  (let ((e '(PAIR (NAME (identifier . "x"))
+                  (NAME (identifier . "y")))))
+    (pattern-match e get
+                   (('PAIR (@first ('NAME ('identifier . x)))
+                           second)
+                    (printf "pair has first element ~A with name ~A, and second element ~A~%" (get 'first) (get 'x) (get 'second)))
+                   (else
+                     (printf "failed outer~%")))))</code></pre>
 
         <p>
-        The <code>pattern-match</code> macro looks a lot like a <code>case</code> expression:
-        it takes a value to match, and then a list of patterns, each followed by code to run.
-        Structurally, the main difference is that it actually takes two parameters before the list of expressions:
-        the second is the name to give a getter function used for retrieving bindings.
-        </p>
-
-        <p>
-        The name of the getter function is used by the macro to scope a function of that name to the body of the successful pattern match.
-        That function provides a way of accessing the bindings made within the pattern match;
-        it takes a symbol, and returns the value associated with that (unquoted) symbol in the pattern.
-        If the pattern were to contain <code>('identifier . x)</code>, and the getter function were called <code>get</code>,
-        then the value of <code>x</code> (which could be any Scheme value) is retrieved with <code>(get 'x)</code> (note the quote).
-        Nested pattern matching works, but the inner getter functions should not shadow the outer getter functions, as that will hide all outer bindings.
+        The first item in the pair will be bound to the <code>first</code> identifier (accessed with <code>(get 'first)</code>),
+        while still being pattern-matched further to extract its identifier, which is bound to <code>x</code>.
         </p>
 
         <h3 id="source-code">Implementation</h3>
@@ -243,6 +137,19 @@
 <i class="code-comment">;; Create a list of bindings from a pattern and a value to match it to.</i>
 (<span class="code-keyword">define</span> (pattern-match/bind value pattern)
   (<span class="code-keyword">cond</span>
+    <i class="code-comment">; If the pattern is a pair with its first item being a single quoted symbol</i>
+    <i class="code-comment">; beginning with the @ character, it's a binding on the whole value, while</i>
+    <i class="code-comment">; the value is still to be pattern-matched further by the second item of</i>
+    <i class="code-comment">; the pair.</i>
+    ((<span class="code-keyword">and</span> (<span class="code-keyword">pair?</span> pattern)
+          (<span class="code-keyword">not</span> (<span class="code-keyword">null?</span> pattern))
+          (<span class="code-keyword">not</span> (<span class="code-keyword">null?</span> (cdr pattern)))
+          (pattern-match/@-symbol? (<span class="code-keyword">car</span> pattern)))
+     (pattern-match/unify (<span class="code-keyword">list</span>
+                            (<span class="code-keyword">list</span> (pattern-match/@-symbol-&gt;symbol
+                                    (<span class="code-keyword">car</span> pattern))
+                                  value))
+                          (pattern-match/bind value (<span class="code-keyword">cadr</span> pattern))))
     <i class="code-comment">; If the pattern is a single-quoted symbol, it's a binding!</i>
     ((<span class="code-keyword">and</span> (<span class="code-keyword">symbol?</span> pattern)
           (<span class="code-keyword">not</span> (pattern-match/quoted-symbol? pattern)))
@@ -286,6 +193,18 @@
 
 <i class="code-comment">;; Extract the symbol from a quoted symbol.</i>
 (<span class="code-keyword">define</span> pattern-match/quoted-symbol-&gt;symbol <span class="code-keyword">cadr</span>)
+
+<i class="code-comment">;; Is the given value an unquoted symbol beginning with an @?</i>
+(<span class="code-keyword">define</span> (pattern-match/@-symbol? value)
+  (<span class="code-keyword">and</span> (<span class="code-keyword">symbol?</span> value)
+       (<span class="code-keyword">not</span> (pattern-match/quoted-symbol? value))
+       (<span class="code-keyword">char=?</span> <span class="code-character">#\@</span> (<span class="code-keyword">car</span> (<span class="code-keyword">string-&gt;list</span> (<span class="code-keyword">symbol-&gt;string</span> value))))))
+
+<i class="code-comment">;; Get the name of the @ symbol without the @.</i>
+(<span class="code-keyword">define</span> (pattern-match/@-symbol-&gt;symbol value)
+  (<span class="code-keyword">if</span> (pattern-match/@-symbol? value)
+    (<span class="code-keyword">string-&gt;symbol</span> (<span class="code-keyword">list-&gt;string</span> (<span class="code-keyword">cdr</span> (<span class="code-keyword">string-&gt;list</span> (<span class="code-keyword">symbol-&gt;string</span> value)))))
+    <span class="code-keyword">#f</span>))
 
 <i class="code-comment">;; Unify two branches of a pattern match bind.</i>
 (<span class="code-keyword">define</span> (pattern-match/unify lhs rhs)
@@ -346,7 +265,7 @@
                     CodePen
                 </li>
             </ul>
-            <p class="small-text">Copyright 2020, 2022 Billy Brown</p>
+            <p class="small-text">Copyright 2022 Billy Brown</p>
         </footer>
 
     </body>

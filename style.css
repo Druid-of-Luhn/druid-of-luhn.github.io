@@ -145,7 +145,10 @@ textarea,
     text-style: italic;
 }
 
-.code-keyword {
+.code-character,
+.code-keyword,
+.code-number,
+.code-string {
     color: #ffaaaa
 }
 
