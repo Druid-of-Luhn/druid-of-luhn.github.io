@@ -7,7 +7,7 @@
 ;;;;
 ;;;; Table of Contents
 ;;;; =================
-;;;; - Imeplementation
+;;;; - Implementation
 ;;;;   - pattern-match : macro
 ;;;;   - pattern-match/bind : 'a -> 'b -> [(symbol 'c)]
 ;;;;   - pattern-match/quoted-symbol? : 'a -> bool
@@ -193,7 +193,7 @@
 ;; If the getter were to be shadowed, then all bindings from the outer pattern-
 ;; match would be made unavailable, regardless of whether they themselves were
 ;; shadowed by the inner pattern-match's variables.
-(define (pattern-match/example-3)
+(define (pattern-match/example-4)
   (let ((e '(PAIR (NAME (identifier . "x"))
                   (NAME (identifier . "y")))))
     (pattern-match e get
@@ -208,14 +208,3 @@
                    (else
                      (printf "failed outer~%")
                      #f))))
-
-(define (pattern-match/example-A e)
-  (if (and (list? e)          (not (null? e))          (eqv? (car     e) 'E)
-           (list? (cadr   e)) (not (null? (cadr   e))) (eqv? (caadr   e) 'NAME)
-           (pair? (cadadr e)) (not (null? (cadadr e))) (eqv? (caadadr e) 'identifier))
-    (begin
-      (printf "identifier: ~A~%" (cdadadr e))
-      (cdadadr e))
-    (begin
-      (printf "Unexpected expression: ~A~%" e)
-      #f)))
